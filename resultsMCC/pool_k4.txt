@@ -1,0 +1,342 @@
+########## Start building garphs from seqs...
+########## Graph Built!
+
+34364 graphs have been split: Train size: 27492, Validation size: 6872
+
+########## Training for 50 epochs on cpu...
+- Epoch [001/50] Train Loss: 0.8873 | Train MCC: -0.008 | Train AUC: 0.495 | Train Acc: 0.499 | Val Loss: 0.6898 | Val MCC: 0.000 | Val AUC: 0.501 | Val Acc: 0.898 | EarlyStop: 0/15 | Time: 41.6s
++ New best MCC: 0.0000 (epoch 1)
+- Epoch [002/50] Train Loss: 0.6932 | Train MCC: 0.007 | Train AUC: 0.502 | Train Acc: 0.503 | Val Loss: 0.7053 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 0/15 | Time: 40.0s
+- Epoch [003/50] Train Loss: 0.6932 | Train MCC: -0.006 | Train AUC: 0.500 | Train Acc: 0.497 | Val Loss: 0.6888 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.898 | EarlyStop: 1/15 | Time: 40.0s
+- Epoch [004/50] Train Loss: 0.6932 | Train MCC: 0.001 | Train AUC: 0.499 | Train Acc: 0.501 | Val Loss: 0.6855 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.898 | EarlyStop: 2/15 | Time: 40.4s
+- Epoch [005/50] Train Loss: 0.6932 | Train MCC: -0.000 | Train AUC: 0.499 | Train Acc: 0.501 | Val Loss: 0.6904 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.898 | EarlyStop: 3/15 | Time: 40.3s
+- Epoch [006/50] Train Loss: 0.6964 | Train MCC: -0.002 | Train AUC: 0.497 | Train Acc: 0.498 | Val Loss: 0.6919 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.898 | EarlyStop: 4/15 | Time: 40.1s
+- Epoch [007/50] Train Loss: 0.6932 | Train MCC: -0.004 | Train AUC: 0.497 | Train Acc: 0.498 | Val Loss: 0.6942 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 5/15 | Time: 40.1s
+- Epoch [008/50] Train Loss: 0.6932 | Train MCC: 0.001 | Train AUC: 0.499 | Train Acc: 0.502 | Val Loss: 0.7037 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 6/15 | Time: 40.5s
+- Epoch [009/50] Train Loss: 0.6932 | Train MCC: -0.007 | Train AUC: 0.493 | Train Acc: 0.498 | Val Loss: 0.6946 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 7/15 | Time: 40.3s
+- Epoch [010/50] Train Loss: 0.6931 | Train MCC: 0.005 | Train AUC: 0.502 | Train Acc: 0.505 | Val Loss: 0.6765 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.898 | EarlyStop: 8/15 | Time: 40.4s
+- Epoch [011/50] Train Loss: 0.6931 | Train MCC: 0.010 | Train AUC: 0.507 | Train Acc: 0.505 | Val Loss: 0.7033 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 9/15 | Time: 40.1s
+- Epoch [012/50] Train Loss: 0.6931 | Train MCC: -0.003 | Train AUC: 0.498 | Train Acc: 0.504 | Val Loss: 0.7098 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 10/15 | Time: 41.2s
+- Epoch [013/50] Train Loss: 0.6932 | Train MCC: -0.004 | Train AUC: 0.500 | Train Acc: 0.498 | Val Loss: 0.6954 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 11/15 | Time: 40.5s
+- Epoch [014/50] Train Loss: 0.6932 | Train MCC: 0.000 | Train AUC: 0.490 | Train Acc: 0.502 | Val Loss: 0.6953 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 12/15 | Time: 40.7s
+- Epoch [015/50] Train Loss: 0.6932 | Train MCC: -0.006 | Train AUC: 0.496 | Train Acc: 0.502 | Val Loss: 0.6985 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.102 | EarlyStop: 13/15 | Time: 40.7s
+- Epoch [016/50] Train Loss: 0.6932 | Train MCC: -0.004 | Train AUC: 0.492 | Train Acc: 0.497 | Val Loss: 0.6920 | Val MCC: 0.000 | Val AUC: 0.500 | Val Acc: 0.898 | EarlyStop: 14/15 | Time: 40.4s
+XXXXXXXXXX Early stopping triggered at epoch 16!
+=================================================
+Best validation MCC: 0.0000 achieved at epoch 1
+=================================================
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 690 samples...
+########## Testing completed. Outputs are saved in results!
+ARABIDOTEST
+{'metrics':    #Sample   TN  FP   FN  TP  ...  Precision  Recall  Accuracy  AUC  MCC
+0      690  138   0  552   0  ...        0.0     0.0       0.2  0.5  0.0
+
+[1 rows x 12 columns], 'probs':                                                gene_id  ...  is_correct
+0    lcl|CP002684.1_cds_AEE27221.1_10 [gene=DCL1] [...  ...       False
+1    lcl|CP002684.1_cds_AEE27220.1_11 [gene=DCL1] [...  ...       False
+2    lcl|CP002684.1_cds_AEE27380.1_242 [gene=FUS5] ...  ...       False
+3    lcl|CP002684.1_cds_AEE27379.1_243 [gene=FUS5] ...  ...       False
+4    lcl|CP002684.1_cds_AEE27381.1_244 [gene=FUS5] ...  ...       False
+..                                                 ...  ...         ...
+685  lcl|CP002688.1_cds_AED95732.1_44589 [gene=PANC...  ...        True
+686  lcl|CP002688.1_cds_AED96653.1_45810 [gene=QRT1...  ...        True
+687  lcl|CP002688.1_cds_ANM69988.1_45811 [gene=QRT1...  ...        True
+688  lcl|CP002688.1_cds_AED97596.1_47109 [gene=MYB9...  ...        True
+689  lcl|CP002688.1_cds_AED97816.1_47391 [gene=TOP3...  ...        True
+
+[690 rows x 7 columns], 'sorted_probs':                                                gene_id  ...  is_correct
+0    lcl|CP002684.1_cds_AEE27221.1_10 [gene=DCL1] [...  ...       False
+1    lcl|CP002684.1_cds_AEE27220.1_11 [gene=DCL1] [...  ...       False
+2    lcl|CP002684.1_cds_AEE27380.1_242 [gene=FUS5] ...  ...       False
+3    lcl|CP002684.1_cds_AEE27379.1_243 [gene=FUS5] ...  ...       False
+4    lcl|CP002684.1_cds_AEE27381.1_244 [gene=FUS5] ...  ...       False
+..                                                 ...  ...         ...
+685  lcl|CP002688.1_cds_AED95732.1_44589 [gene=PANC...  ...        True
+686  lcl|CP002688.1_cds_AED96653.1_45810 [gene=QRT1...  ...        True
+687  lcl|CP002688.1_cds_ANM69988.1_45811 [gene=QRT1...  ...        True
+688  lcl|CP002688.1_cds_AED97596.1_47109 [gene=MYB9...  ...        True
+689  lcl|CP002688.1_cds_AED97816.1_47391 [gene=TOP3...  ...        True
+
+[690 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 16741 samples...
+########## Testing completed. Outputs are saved in results!
+ELEGANSTEST
+{'metrics':    #Sample     TN  FP   FN  TP  ...  Precision  Recall  Accuracy     AUC  MCC
+0    16741  16071   0  670   0  ...        0.0     0.0      0.96  0.5011  0.0
+
+[1 rows x 12 columns], 'probs':               gene_id  true_label  ...  confidence  is_correct
+0      WBGene00000064           1  ...    0.502131       False
+1      WBGene00000066           1  ...    0.502131       False
+2      WBGene00000067           1  ...    0.502131       False
+3      WBGene00000098           1  ...    0.502131       False
+4      WBGene00000142           1  ...    0.502131       False
+...               ...         ...  ...         ...         ...
+16736  WBGene00020732           0  ...    0.502131        True
+16737  WBGene00017625           0  ...    0.502131        True
+16738  WBGene00019189           0  ...    0.502131        True
+16739  WBGene00007069           0  ...    0.502131        True
+16740  WBGene00007068           0  ...    0.502131        True
+
+[16741 rows x 7 columns], 'sorted_probs':               gene_id  true_label  ...  confidence  is_correct
+0      WBGene00018252           0  ...    0.502273        True
+1      WBGene00018817           0  ...    0.502239        True
+2      WBGene00195157           0  ...    0.502221        True
+3      WBGene00206498           0  ...    0.502220        True
+4      WBGene00235263           0  ...    0.502215        True
+...               ...         ...  ...         ...         ...
+16736  WBGene00007248           0  ...    0.502131        True
+16737  WBGene00007247           0  ...    0.502131        True
+16738  WBGene00007246           0  ...    0.502131        True
+16739  WBGene00007245           0  ...    0.502131        True
+16740  WBGene00007998           0  ...    0.502131        True
+
+[16741 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 7298 samples...
+########## Testing completed. Outputs are saved in results!
+MELANOTEST
+{'metrics':    #Sample    TN  FP   FN  TP  ...  Precision  Recall  Accuracy     AUC  MCC
+0     7298  6884   0  414   0  ...        0.0     0.0    0.9433  0.4994  0.0
+
+[1 rows x 12 columns], 'probs':           gene_id  true_label  ...  confidence  is_correct
+0     FBgn0000043           1  ...    0.502131       False
+1     FBgn0000044           1  ...    0.502131       False
+2     FBgn0000046           1  ...    0.502131       False
+3     FBgn0000075           1  ...    0.502131       False
+4     FBgn0000100           1  ...    0.502131       False
+...           ...         ...  ...         ...         ...
+7293  FBgn0267487           0  ...    0.502131        True
+7294  FBgn0267689           0  ...    0.502131        True
+7295  FBgn0267690           0  ...    0.502131        True
+7296  FBgn0267727           0  ...    0.502131        True
+7297  FBgn0267792           0  ...    0.502131        True
+
+[7298 rows x 7 columns], 'sorted_probs':           gene_id  true_label  ...  confidence  is_correct
+0     FBgn0030997           0  ...    0.502221        True
+1     FBgn0036655           0  ...    0.502221        True
+2     FBgn0266445           1  ...    0.502215       False
+3     FBgn0030743           0  ...    0.502208        True
+4     FBgn0031277           0  ...    0.502159        True
+...           ...         ...  ...         ...         ...
+7293  FBgn0032233           0  ...    0.502131        True
+7294  FBgn0032230           0  ...    0.502131        True
+7295  FBgn0032229           0  ...    0.502131        True
+7296  FBgn0032225           0  ...    0.502131        True
+7297  FBgn0032265           0  ...    0.502131        True
+
+[7298 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 12015 samples...
+########## Testing completed. Outputs are saved in results!
+HOMOTEST
+{'metrics':    #Sample     TN  FP    FN  TP  ...  Precision  Recall  Accuracy     AUC  MCC
+0    12015  10499   0  1516   0  ...        0.0     0.0    0.8738  0.5009  0.0
+
+[1 rows x 12 columns], 'probs':                                 gene_id  true_label  ...  confidence  is_correct
+0            essential_PSMG2|HGNC:24929           1  ...    0.502131       False
+1              essential_UPF1|HGNC:9962           1  ...    0.502131       False
+2          essential_ATP6AP2|HGNC:18305           1  ...    0.502131       False
+3              essential_DPH1|HGNC:3003           1  ...    0.502131       False
+4          essential_ANAPC11|HGNC:14452           1  ...    0.502131       False
+...                                 ...         ...  ...         ...         ...
+12010  non_essential_SLC6A18|HGNC:26441           0  ...    0.502131        True
+12011       non_essential_CLU|HGNC:2095           0  ...    0.502131        True
+12012     non_essential_CLDN2|HGNC:2041           0  ...    0.502131        True
+12013     non_essential_NPTX2|HGNC:7953           0  ...    0.502131        True
+12014     non_essential_GAPT|HGNC:26588           0  ...    0.502131        True
+
+[12015 rows x 7 columns], 'sorted_probs':                                  gene_id  true_label  ...  confidence  is_correct
+0      non_essential_KRTAP4-2|HGNC:18900           0  ...    0.502235        True
+1        non_essential_MT1HL1|HGNC:31864           0  ...    0.502177        True
+2        non_essential_ZNF761|HGNC:23179           0  ...    0.502175        True
+3          non_essential_OST4|HGNC:32483           0  ...    0.502175        True
+4      non_essential_C16orf54|HGNC:26649           0  ...    0.502165        True
+...                                  ...         ...  ...         ...         ...
+12010      non_essential_RCAN2|HGNC:3041           0  ...    0.502131        True
+12011    non_essential_LRRTM3|HGNC:19410           0  ...    0.502131        True
+12012     non_essential_SMCO3|HGNC:34401           0  ...    0.502131        True
+12013      non_essential_CD180|HGNC:6726           0  ...    0.502131        True
+12014      non_essential_ESX1|HGNC:14865           0  ...    0.502131        True
+
+[12015 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 4622 samples...
+########## Testing completed. Outputs are saved in results!
+SACCHAROTEST
+{'metrics':    #Sample    TN  FP   FN  TP  ...  Precision  Recall  Accuracy     AUC  MCC
+0     4622  3687   0  935   0  ...        0.0     0.0    0.7977  0.4997  0.0
+
+[1 rows x 12 columns], 'probs':                                                 gene_id  ...  is_correct
+0     lcl|NC_001133.9_cds_NP_009356.1_26 [gene=PTA1]...  ...       False
+1     lcl|NC_001133.9_cds_NP_009359.1_28 [gene=CDC24...  ...       False
+2     lcl|NC_001133.9_cds_NP_009362.1_31 [gene=CDC19...  ...       False
+3     lcl|NC_001133.9_cds_NP_009367.1_36 [gene=MTW1]...  ...       False
+4     lcl|NC_001133.9_cds_NP_009369.1_38 [gene=POP5]...  ...       False
+...                                                 ...  ...         ...
+4617  lcl|NC_001148.4_cds_NP_015524.1_6002 [gene=SGE...  ...        True
+4618  lcl|NC_001148.4_cds_NP_015525.1_6003 [gene=ARR...  ...        True
+4619  lcl|NC_001148.4_cds_NP_015526.1_6004 [gene=ARR...  ...        True
+4620  lcl|NC_001148.4_cds_NP_015527.1_6005 [gene=ARR...  ...        True
+4621  lcl|NC_001224.1_cds_NP_009305.1_6009 [gene=COX...  ...        True
+
+[4622 rows x 7 columns], 'sorted_probs':                                                 gene_id  ...  is_correct
+0     lcl|NC_001136.10_cds_NP_010097.1_740 [gene=RPL...  ...        True
+1     lcl|NC_001140.6_cds_NP_976247.1_2672 [gene=NBL...  ...       False
+2     lcl|NC_001137.3_cds_NP_010881.1_1490 [gene=MTC...  ...        True
+3     lcl|NC_001143.9_cds_NP_012981.3_3544 [gene=RHO...  ...        True
+4     lcl|NC_001143.9_cds_NP_012980.1_3543 [gene=DYN...  ...        True
+...                                                 ...  ...         ...
+4617  lcl|NC_001136.10_cds_NP_010343.1_969 [gene=TGL...  ...        True
+4618  lcl|NC_001136.10_cds_NP_010342.3_968 [gene=YOS...  ...        True
+4619  lcl|NC_001136.10_cds_NP_010341.3_967 [gene=EMC...  ...        True
+4620  lcl|NC_001136.10_cds_NP_010340.1_966 [gene=PST...  ...        True
+4621  lcl|NC_001136.10_cds_NP_010353.3_979 [gene=DOS...  ...        True
+
+[4622 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 4173 samples...
+########## Testing completed. Outputs are saved in results!
+BASITEST
+{'metrics':    #Sample    TN  FP   FN  TP  ...  Precision  Recall  Accuracy     AUC     MCC
+0     4173  3810   1  362   0  ...        0.0     0.0     0.913  0.5003 -0.0048
+
+[1 rows x 12 columns], 'probs':                                                 gene_id  ...  is_correct
+0     lcl|AL009126.3_cds_CAB13812.1_2031 [gene=desR]...  ...        True
+1     lcl|AL009126.3_cds_CAB12504.3_731 [gene=yeeI] ...  ...        True
+2     lcl|AL009126.3_cds_CAB14435.2_2649 [gene=yqgA]...  ...        True
+3     lcl|AL009126.3_cds_CAB15870.1_4052 [gene=ywaF]...  ...        True
+4     lcl|AL009126.3_cds_CAB14605.1_2821 [gene=czcO]...  ...        True
+...                                                 ...  ...         ...
+4168  lcl|AL009126.3_cds_CAB13622.1_1825 [gene=nrdE]...  ...       False
+4169  lcl|AL009126.3_cds_CAB12253.1_460 [gene=dctR] ...  ...        True
+4170  lcl|AL009126.3_cds_CAB14146.1_2365 [gene=yppC]...  ...        True
+4171  lcl|AL009126.3_cds_CAB14834.1_3050 [gene=araP]...  ...        True
+4172  lcl|AL009126.3_cds_CAB12897.1_1105 [gene=yhjN]...  ...        True
+
+[4173 rows x 7 columns], 'sorted_probs':                                                 gene_id  ...  is_correct
+0     lcl|AL009126.3_cds_CAB15160.1_3352 [gene=degQ]...  ...       False
+1     lcl|AL009126.3_cds_CAB13911.1_2137 [gene=yosA]...  ...        True
+2     lcl|AL009126.3_cds_CAB12913.1_1123 [gene=pchI]...  ...        True
+3     lcl|AL009126.3_cds_CAE01468.1_3942 [gene=sboX]...  ...        True
+4     lcl|AL009126.3_cds_CAB15995.2_4172 [gene=yxeD]...  ...        True
+...                                                 ...  ...         ...
+4168  lcl|AL009126.3_cds_CAB14944.1_3143 [gene=rpsD]...  ...       False
+4169  lcl|AL009126.3_cds_CAB15016.1_3214 [gene=bceA]...  ...        True
+4170  lcl|AL009126.3_cds_CAB12222.1_428 [gene=ycsN] ...  ...        True
+4171  lcl|AL009126.3_cds_CAB14432.3_2646 [gene=sodA]...  ...        True
+4172  lcl|AL009126.3_cds_CAB13298.1_1504 [gene=sppO]...  ...        True
+
+[4173 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 1590 samples...
+########## Testing completed. Outputs are saved in results!
+MARITEST
+{'metrics':    #Sample    TN  FP   FN  TP  ...  Precision  Recall  Accuracy    AUC  MCC
+0     1590  1072   0  518   0  ...        0.0     0.0    0.6742  0.499  0.0
+
+[1 rows x 12 columns], 'probs':               gene_id  true_label  ...  confidence  is_correct
+0      sp|DEG30010001           1  ...    0.502131       False
+1      sp|DEG30010002           1  ...    0.502131       False
+2      sp|DEG30010003           1  ...    0.502131       False
+3      sp|DEG30010004           1  ...    0.502131       False
+4      sp|DEG30010005           1  ...    0.502131       False
+...               ...         ...  ...         ...         ...
+1585  sp|DNEG30011073           0  ...    0.502131        True
+1586  sp|DNEG30011074           0  ...    0.502131        True
+1587  sp|DNEG30011075           0  ...    0.502131        True
+1588  sp|DNEG30011076           0  ...    0.502131        True
+1589  sp|DNEG30011077           0  ...    0.502131        True
+
+[1590 rows x 7 columns], 'sorted_probs':               gene_id  true_label  ...  confidence  is_correct
+0     sp|DNEG30010188           0  ...    0.502270        True
+1      sp|DEG30010146           1  ...    0.502222       False
+2     sp|DNEG30010281           0  ...    0.502178        True
+3      sp|DEG30010514           1  ...    0.502134       False
+4     sp|DNEG30010553           0  ...    0.502131        True
+...               ...         ...  ...         ...         ...
+1585  sp|DNEG30010009           0  ...    0.502131        True
+1586  sp|DNEG30010008           0  ...    0.502131        True
+1587  sp|DNEG30010007           0  ...    0.502131        True
+1588  sp|DNEG30010006           0  ...    0.502131        True
+1589  sp|DNEG30010018           0  ...    0.502131        True
+
+[1590 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 8592 samples...
+########## Testing completed. Outputs are saved in results!
+POOLTEST
+{'metrics':    #Sample    TN  FP   FN  TP  ...  Precision  Recall  Accuracy    AUC  MCC
+0     8592  7671   0  921   0  ...        0.0     0.0    0.8928  0.501  0.0
+
+[1 rows x 12 columns], 'probs':                                    gene_id  true_label  ...  confidence  is_correct
+0                           WBGene00010653           0  ...    0.502131        True
+1         non_essential_TMEM86B|HGNC:28448           0  ...    0.502131        True
+2     lcl|NC_001144.5_cds_NP_013229.1_3782           0  ...    0.502131        True
+3                           WBGene00017611           0  ...    0.502131        True
+4         non_essential_TBC1D23|HGNC:25622           0  ...    0.502131        True
+...                                    ...         ...  ...         ...         ...
+8587           non_essential_MLN|HGNC:7141           0  ...    0.502131        True
+8588                           FBgn0033490           0  ...    0.502131        True
+8589            essential_RCC1L|HGNC:14948           1  ...    0.502131       False
+8590   lcl|NC_001134.8_cds_NP_009656.2_307           0  ...    0.502131        True
+8591                        WBGene00018622           0  ...    0.502131        True
+
+[8592 rows x 7 columns], 'sorted_probs':                                 gene_id  true_label  ...  confidence  is_correct
+0                        WBGene00018817           0  ...    0.502239        True
+1     non_essential_KRTAP4-2|HGNC:18900           0  ...    0.502235        True
+2                        WBGene00206498           0  ...    0.502220        True
+3                        WBGene00012313           0  ...    0.502209        True
+4                        WBGene00008255           0  ...    0.502203        True
+...                                 ...         ...  ...         ...         ...
+8587                     WBGene00017538           0  ...    0.502131        True
+8588                     WBGene00013317           0  ...    0.502131        True
+8589                     WBGene00017919           0  ...    0.502131        True
+8590                        FBgn0030507           0  ...    0.502131        True
+8591   non_essential_SERPINF2|HGNC:9075           0  ...    0.502131        True
+
+[8592 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 49132 samples...
+########## Testing completed. Outputs are saved in results!
+MUSCULTEST
+{'metrics':    #Sample     TN     FP    FN  ...  Recall  Accuracy     AUC     MCC
+0    49132  14380  23505  2941  ...  0.7385    0.4617  0.5796  0.1038
+
+[1 rows x 12 columns], 'probs':                                                  gene_id  ...  is_correct
+0      lcl|NC_000074.7_cds_NP_001389597.1_45935 [gene...  ...       False
+1      lcl|NC_000073.7_cds_XP_017167762.1_42834 [gene...  ...       False
+2      lcl|NC_000069.7_cds_XP_011238378.1_15670 [gene...  ...        True
+3      lcl|NC_000067.7_cds_NP_031947.1_4050 [gene=Elf...  ...       False
+4      lcl|NC_000075.7_cds_XP_036010976.1_51303 [gene...  ...       False
+...                                                  ...  ...         ...
+49127  lcl|NC_000072.7_cds_XP_006506108.1_32274 [gene...  ...        True
+49128  lcl|NC_000078.7_cds_NP_001171144.1_69228 [gene...  ...        True
+49129  lcl|NC_000074.7_cds_XP_006508990.1_45217 [gene...  ...       False
+49130  lcl|NC_000083.7_cds_NP_001344261.1_87113 [gene...  ...        True
+49131  lcl|NC_000067.7_cds_NP_033281.1_2406 [gene=Ser...  ...        True
+
+[49132 rows x 7 columns], 'sorted_probs':                                                  gene_id  ...  is_correct
+0      lcl|NC_000067.7_cds_NP_001355697.1_1289 [gene=...  ...        True
+1      lcl|NC_000067.7_cds_NP_001106838.1_1290 [gene=...  ...        True
+2      lcl|NC_000085.7_cds_XP_017173636.1_92137 [gene...  ...        True
+3      lcl|NC_000085.7_cds_XP_030106739.1_92138 [gene...  ...        True
+4      lcl|NC_000085.7_cds_XP_006527002.1_92140 [gene...  ...        True
+...                                                  ...  ...         ...
+49127  lcl|NC_000080.7_cds_NP_001391872.1_76379 [gene...  ...       False
+49128  lcl|NC_000077.7_cds_NP_079757.2_65480 [gene=Sm...  ...       False
+49129  lcl|NC_000070.7_cds_XP_006539233.1_24455 [gene...  ...       False
+49130  lcl|NC_000078.7_cds_NP_035512.1_68255 [gene=Si...  ...       False
+49131  lcl|NC_000075.7_cds_XP_017169170.1_51859 [gene...  ...       False
+
+[49132 rows x 7 columns]}

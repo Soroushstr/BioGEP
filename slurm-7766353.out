@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/baseline_codes_1.py", line 13, in <module>
+    results = train(graphs, model, model_path="ara_model.pt", weighted_sampling=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/new_pipeline_1.py", line 136, in train
+    model.load_state_dict(torch.load(model_path, map_location=device))
+  File "/home/fs72129/imansamiei/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2629, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for WeightedGCN:
+	Missing key(s) in state_dict: "embedding.weight". 
+	Unexpected key(s) in state_dict: "input_proj.0.weight", "input_proj.0.bias", "input_proj.1.weight", "input_proj.1.bias", "convs.2.bias", "convs.2.lin.weight", "norms.2.weight", "norms.2.bias", "mlp.6.weight", "mlp.6.bias". 
+	size mismatch for convs.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for convs.0.lin.weight: copying a param with shape torch.Size([256, 256]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+	size mismatch for convs.1.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for convs.1.lin.weight: copying a param with shape torch.Size([256, 256]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+	size mismatch for norms.0.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for norms.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for norms.1.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for norms.1.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for mlp.0.weight: copying a param with shape torch.Size([256, 512]) from checkpoint, the shape in current model is torch.Size([64, 128]).
+	size mismatch for mlp.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for mlp.3.weight: copying a param with shape torch.Size([128, 256]) from checkpoint, the shape in current model is torch.Size([2, 64]).
+	size mismatch for mlp.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([2]).

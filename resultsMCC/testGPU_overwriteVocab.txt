@@ -1,0 +1,145 @@
+########## Start building garphs from seqs...
+########## Graph Built!
+
+16741 graphs have been split: Train size: 13393, Validation size: 3348
+
+########## Training for 50 epochs on cuda...
+- Epoch [001/50] Train Loss: 0.2436 | Train MCC: -0.012 | Train AUC: 0.626 | Train Acc: 0.505 | Val Loss: 2.1411 | Val MCC: 0.000 | Val AUC: 0.774 | Val Acc: 0.043 | EarlyStop: 0/15 | Time: 7.6s
++ New best MCC: 0.0000 (epoch 1)
+- Epoch [002/50] Train Loss: 0.1515 | Train MCC: 0.033 | Train AUC: 0.768 | Train Acc: 0.504 | Val Loss: 2.5507 | Val MCC: 0.000 | Val AUC: 0.795 | Val Acc: 0.043 | EarlyStop: 0/15 | Time: 6.8s
+- Epoch [003/50] Train Loss: 0.1401 | Train MCC: 0.014 | Train AUC: 0.810 | Train Acc: 0.500 | Val Loss: 3.4563 | Val MCC: 0.000 | Val AUC: 0.792 | Val Acc: 0.043 | EarlyStop: 1/15 | Time: 6.7s
+- Epoch [004/50] Train Loss: 0.1284 | Train MCC: 0.000 | Train AUC: 0.838 | Train Acc: 0.509 | Val Loss: 2.6038 | Val MCC: 0.000 | Val AUC: 0.801 | Val Acc: 0.043 | EarlyStop: 2/15 | Time: 6.7s
+- Epoch [005/50] Train Loss: 0.1233 | Train MCC: 0.000 | Train AUC: 0.852 | Train Acc: 0.507 | Val Loss: 1.9707 | Val MCC: 0.000 | Val AUC: 0.809 | Val Acc: 0.043 | EarlyStop: 3/15 | Time: 6.7s
+- Epoch [006/50] Train Loss: 0.1174 | Train MCC: 0.101 | Train AUC: 0.870 | Train Acc: 0.512 | Val Loss: 2.1989 | Val MCC: 0.000 | Val AUC: 0.799 | Val Acc: 0.043 | EarlyStop: 4/15 | Time: 6.7s
+- Epoch [007/50] Train Loss: 0.1176 | Train MCC: 0.022 | Train AUC: 0.879 | Train Acc: 0.492 | Val Loss: 2.3348 | Val MCC: 0.000 | Val AUC: 0.809 | Val Acc: 0.043 | EarlyStop: 5/15 | Time: 6.7s
+- Epoch [008/50] Train Loss: 0.1116 | Train MCC: 0.239 | Train AUC: 0.887 | Train Acc: 0.556 | Val Loss: 2.5306 | Val MCC: 0.095 | Val AUC: 0.808 | Val Acc: 0.281 | EarlyStop: 6/15 | Time: 6.7s
++ New best MCC: 0.0954 (epoch 8)
+- Epoch [009/50] Train Loss: 0.1084 | Train MCC: 0.436 | Train AUC: 0.894 | Train Acc: 0.658 | Val Loss: 2.3641 | Val MCC: 0.106 | Val AUC: 0.807 | Val Acc: 0.329 | EarlyStop: 0/15 | Time: 6.8s
++ New best MCC: 0.1061 (epoch 9)
+- Epoch [010/50] Train Loss: 0.1042 | Train MCC: 0.495 | Train AUC: 0.898 | Train Acc: 0.697 | Val Loss: 3.1246 | Val MCC: 0.111 | Val AUC: 0.807 | Val Acc: 0.350 | EarlyStop: 0/15 | Time: 6.8s
++ New best MCC: 0.1107 (epoch 10)
+- Epoch [011/50] Train Loss: 0.1033 | Train MCC: 0.534 | Train AUC: 0.902 | Train Acc: 0.721 | Val Loss: 2.6100 | Val MCC: 0.118 | Val AUC: 0.810 | Val Acc: 0.369 | EarlyStop: 0/15 | Time: 6.7s
++ New best MCC: 0.1178 (epoch 11)
+- Epoch [012/50] Train Loss: 0.0984 | Train MCC: 0.539 | Train AUC: 0.907 | Train Acc: 0.726 | Val Loss: 1.2622 | Val MCC: 0.192 | Val AUC: 0.808 | Val Acc: 0.629 | EarlyStop: 0/15 | Time: 6.8s
++ New best MCC: 0.1919 (epoch 12)
+- Epoch [013/50] Train Loss: 0.0968 | Train MCC: 0.571 | Train AUC: 0.910 | Train Acc: 0.745 | Val Loss: 1.3070 | Val MCC: 0.215 | Val AUC: 0.810 | Val Acc: 0.672 | EarlyStop: 0/15 | Time: 6.8s
++ New best MCC: 0.2154 (epoch 13)
+- Epoch [014/50] Train Loss: 0.0934 | Train MCC: 0.598 | Train AUC: 0.917 | Train Acc: 0.763 | Val Loss: 1.1333 | Val MCC: 0.212 | Val AUC: 0.813 | Val Acc: 0.708 | EarlyStop: 0/15 | Time: 6.8s
+- Epoch [015/50] Train Loss: 0.0912 | Train MCC: 0.611 | Train AUC: 0.918 | Train Acc: 0.773 | Val Loss: 1.1257 | Val MCC: 0.212 | Val AUC: 0.814 | Val Acc: 0.690 | EarlyStop: 1/15 | Time: 6.8s
+- Epoch [016/50] Train Loss: 0.0912 | Train MCC: 0.615 | Train AUC: 0.919 | Train Acc: 0.775 | Val Loss: 1.1616 | Val MCC: 0.203 | Val AUC: 0.796 | Val Acc: 0.697 | EarlyStop: 2/15 | Time: 6.8s
+- Epoch [017/50] Train Loss: 0.0863 | Train MCC: 0.638 | Train AUC: 0.927 | Train Acc: 0.791 | Val Loss: 1.9224 | Val MCC: 0.179 | Val AUC: 0.806 | Val Acc: 0.586 | EarlyStop: 3/15 | Time: 6.8s
+- Epoch [018/50] Train Loss: 0.0902 | Train MCC: 0.641 | Train AUC: 0.923 | Train Acc: 0.791 | Val Loss: 1.1722 | Val MCC: 0.203 | Val AUC: 0.800 | Val Acc: 0.698 | EarlyStop: 4/15 | Time: 6.7s
+- Epoch [019/50] Train Loss: 0.0861 | Train MCC: 0.662 | Train AUC: 0.928 | Train Acc: 0.805 | Val Loss: 0.8569 | Val MCC: 0.225 | Val AUC: 0.797 | Val Acc: 0.778 | EarlyStop: 5/15 | Time: 6.7s
++ New best MCC: 0.2248 (epoch 19)
+- Epoch [020/50] Train Loss: 0.0830 | Train MCC: 0.672 | Train AUC: 0.933 | Train Acc: 0.811 | Val Loss: 1.4276 | Val MCC: 0.192 | Val AUC: 0.809 | Val Acc: 0.656 | EarlyStop: 0/15 | Time: 6.8s
+- Epoch [021/50] Train Loss: 0.0797 | Train MCC: 0.680 | Train AUC: 0.934 | Train Acc: 0.817 | Val Loss: 0.8129 | Val MCC: 0.241 | Val AUC: 0.813 | Val Acc: 0.793 | EarlyStop: 1/15 | Time: 6.7s
++ New best MCC: 0.2411 (epoch 21)
+- Epoch [022/50] Train Loss: 0.0785 | Train MCC: 0.693 | Train AUC: 0.935 | Train Acc: 0.826 | Val Loss: 1.1580 | Val MCC: 0.214 | Val AUC: 0.813 | Val Acc: 0.724 | EarlyStop: 0/15 | Time: 6.7s
+- Epoch [023/50] Train Loss: 0.0722 | Train MCC: 0.709 | Train AUC: 0.941 | Train Acc: 0.836 | Val Loss: 1.8836 | Val MCC: 0.178 | Val AUC: 0.815 | Val Acc: 0.595 | EarlyStop: 1/15 | Time: 6.8s
+- Epoch [024/50] Train Loss: 0.0725 | Train MCC: 0.716 | Train AUC: 0.939 | Train Acc: 0.839 | Val Loss: 0.7072 | Val MCC: 0.264 | Val AUC: 0.813 | Val Acc: 0.817 | EarlyStop: 2/15 | Time: 6.7s
++ New best MCC: 0.2635 (epoch 24)
+- Epoch [025/50] Train Loss: 0.0702 | Train MCC: 0.722 | Train AUC: 0.941 | Train Acc: 0.844 | Val Loss: 0.7400 | Val MCC: 0.237 | Val AUC: 0.805 | Val Acc: 0.809 | EarlyStop: 0/15 | Time: 6.7s
+- Epoch [026/50] Train Loss: 0.0659 | Train MCC: 0.740 | Train AUC: 0.943 | Train Acc: 0.855 | Val Loss: 1.3275 | Val MCC: 0.214 | Val AUC: 0.809 | Val Acc: 0.719 | EarlyStop: 1/15 | Time: 6.8s
+- Epoch [027/50] Train Loss: 0.0708 | Train MCC: 0.727 | Train AUC: 0.944 | Train Acc: 0.848 | Val Loss: 1.1995 | Val MCC: 0.210 | Val AUC: 0.801 | Val Acc: 0.743 | EarlyStop: 2/15 | Time: 6.8s
+- Epoch [028/50] Train Loss: 0.0717 | Train MCC: 0.729 | Train AUC: 0.943 | Train Acc: 0.849 | Val Loss: 0.9028 | Val MCC: 0.234 | Val AUC: 0.803 | Val Acc: 0.809 | EarlyStop: 3/15 | Time: 6.8s
+- Epoch [029/50] Train Loss: 0.0634 | Train MCC: 0.750 | Train AUC: 0.952 | Train Acc: 0.862 | Val Loss: 1.6792 | Val MCC: 0.184 | Val AUC: 0.806 | Val Acc: 0.635 | EarlyStop: 4/15 | Time: 6.8s
+- Epoch [030/50] Train Loss: 0.0752 | Train MCC: 0.722 | Train AUC: 0.937 | Train Acc: 0.846 | Val Loss: 1.1781 | Val MCC: 0.210 | Val AUC: 0.807 | Val Acc: 0.717 | EarlyStop: 5/15 | Time: 6.8s
+- Epoch [031/50] Train Loss: 0.0646 | Train MCC: 0.751 | Train AUC: 0.947 | Train Acc: 0.862 | Val Loss: 0.8012 | Val MCC: 0.253 | Val AUC: 0.811 | Val Acc: 0.818 | EarlyStop: 6/15 | Time: 6.8s
+- Epoch [032/50] Train Loss: 0.0689 | Train MCC: 0.755 | Train AUC: 0.950 | Train Acc: 0.865 | Val Loss: 1.9604 | Val MCC: 0.191 | Val AUC: 0.815 | Val Acc: 0.642 | EarlyStop: 7/15 | Time: 6.8s
+- Epoch [033/50] Train Loss: 0.0611 | Train MCC: 0.765 | Train AUC: 0.950 | Train Acc: 0.871 | Val Loss: 1.3789 | Val MCC: 0.208 | Val AUC: 0.807 | Val Acc: 0.710 | EarlyStop: 8/15 | Time: 6.8s
+- Epoch [034/50] Train Loss: 0.0602 | Train MCC: 0.770 | Train AUC: 0.953 | Train Acc: 0.874 | Val Loss: 1.6192 | Val MCC: 0.201 | Val AUC: 0.806 | Val Acc: 0.690 | EarlyStop: 9/15 | Time: 6.8s
+- Epoch [035/50] Train Loss: 0.0612 | Train MCC: 0.763 | Train AUC: 0.954 | Train Acc: 0.869 | Val Loss: 0.6311 | Val MCC: 0.269 | Val AUC: 0.809 | Val Acc: 0.879 | EarlyStop: 10/15 | Time: 6.8s
++ New best MCC: 0.2688 (epoch 35)
+- Epoch [036/50] Train Loss: 0.0645 | Train MCC: 0.753 | Train AUC: 0.949 | Train Acc: 0.864 | Val Loss: 0.8490 | Val MCC: 0.240 | Val AUC: 0.806 | Val Acc: 0.806 | EarlyStop: 0/15 | Time: 6.8s
+- Epoch [037/50] Train Loss: 0.0601 | Train MCC: 0.774 | Train AUC: 0.956 | Train Acc: 0.875 | Val Loss: 0.8895 | Val MCC: 0.237 | Val AUC: 0.804 | Val Acc: 0.815 | EarlyStop: 1/15 | Time: 6.8s
+- Epoch [038/50] Train Loss: 0.0651 | Train MCC: 0.769 | Train AUC: 0.953 | Train Acc: 0.874 | Val Loss: 0.9663 | Val MCC: 0.234 | Val AUC: 0.816 | Val Acc: 0.788 | EarlyStop: 2/15 | Time: 6.8s
+- Epoch [039/50] Train Loss: 0.0600 | Train MCC: 0.764 | Train AUC: 0.957 | Train Acc: 0.871 | Val Loss: 0.7218 | Val MCC: 0.274 | Val AUC: 0.812 | Val Acc: 0.880 | EarlyStop: 3/15 | Time: 6.7s
++ New best MCC: 0.2737 (epoch 39)
+- Epoch [040/50] Train Loss: 0.0569 | Train MCC: 0.789 | Train AUC: 0.958 | Train Acc: 0.885 | Val Loss: 1.9781 | Val MCC: 0.180 | Val AUC: 0.806 | Val Acc: 0.632 | EarlyStop: 0/15 | Time: 6.8s
+- Epoch [041/50] Train Loss: 0.0605 | Train MCC: 0.779 | Train AUC: 0.956 | Train Acc: 0.879 | Val Loss: 0.8206 | Val MCC: 0.251 | Val AUC: 0.809 | Val Acc: 0.854 | EarlyStop: 1/15 | Time: 6.8s
+- Epoch [042/50] Train Loss: 0.0553 | Train MCC: 0.788 | Train AUC: 0.958 | Train Acc: 0.884 | Val Loss: 1.8285 | Val MCC: 0.177 | Val AUC: 0.802 | Val Acc: 0.604 | EarlyStop: 2/15 | Time: 6.8s
+- Epoch [043/50] Train Loss: 0.0585 | Train MCC: 0.767 | Train AUC: 0.955 | Train Acc: 0.872 | Val Loss: 0.7838 | Val MCC: 0.276 | Val AUC: 0.806 | Val Acc: 0.870 | EarlyStop: 3/15 | Time: 6.7s
++ New best MCC: 0.2757 (epoch 43)
+- Epoch [044/50] Train Loss: 0.0552 | Train MCC: 0.767 | Train AUC: 0.963 | Train Acc: 0.872 | Val Loss: 0.9223 | Val MCC: 0.228 | Val AUC: 0.803 | Val Acc: 0.819 | EarlyStop: 0/15 | Time: 6.8s
+- Epoch [045/50] Train Loss: 0.0567 | Train MCC: 0.773 | Train AUC: 0.961 | Train Acc: 0.876 | Val Loss: 0.9240 | Val MCC: 0.263 | Val AUC: 0.809 | Val Acc: 0.845 | EarlyStop: 1/15 | Time: 6.8s
+- Epoch [046/50] Train Loss: 0.0520 | Train MCC: 0.775 | Train AUC: 0.963 | Train Acc: 0.876 | Val Loss: 0.9582 | Val MCC: 0.245 | Val AUC: 0.797 | Val Acc: 0.820 | EarlyStop: 2/15 | Time: 6.8s
+- Epoch [047/50] Train Loss: 0.0544 | Train MCC: 0.775 | Train AUC: 0.961 | Train Acc: 0.876 | Val Loss: 1.4260 | Val MCC: 0.203 | Val AUC: 0.802 | Val Acc: 0.733 | EarlyStop: 3/15 | Time: 6.8s
+- Epoch [048/50] Train Loss: 0.0550 | Train MCC: 0.777 | Train AUC: 0.960 | Train Acc: 0.878 | Val Loss: 0.9656 | Val MCC: 0.239 | Val AUC: 0.806 | Val Acc: 0.811 | EarlyStop: 4/15 | Time: 6.7s
+- Epoch [049/50] Train Loss: 0.0573 | Train MCC: 0.768 | Train AUC: 0.960 | Train Acc: 0.873 | Val Loss: 0.8143 | Val MCC: 0.275 | Val AUC: 0.803 | Val Acc: 0.867 | EarlyStop: 5/15 | Time: 6.7s
+- Epoch [050/50] Train Loss: 0.0501 | Train MCC: 0.786 | Train AUC: 0.965 | Train Acc: 0.883 | Val Loss: 0.8046 | Val MCC: 0.262 | Val AUC: 0.803 | Val Acc: 0.860 | EarlyStop: 6/15 | Time: 6.7s
+
+########## Training completed for 50 epochs.
+=================================================
+Best validation MCC: 0.2757 achieved at epoch 43
+=================================================
+Best threshold: 0.94, MCC: 0.2877
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 16741 samples...
+########## Testing completed. Outputs are saved in results!
+Elge
+{'metrics':    #Sample     TN    FP  FN   TP  ...  Precision  Recall  Accuracy     AUC     MCC
+0    16741  14801  1270  70  600  ...     0.3209  0.8955      0.92  0.9466  0.5081
+
+[1 rows x 12 columns], 'probs':               gene_id  true_label  ...  confidence  is_correct
+0      WBGene00000064           1  ...    0.999437        True
+1      WBGene00000066           1  ...    0.999992        True
+2      WBGene00000067           1  ...    1.000000        True
+3      WBGene00000098           1  ...    0.999294        True
+4      WBGene00000142           1  ...    0.996847        True
+...               ...         ...  ...         ...         ...
+16736  WBGene00020732           0  ...    0.521540        True
+16737  WBGene00017625           0  ...    1.000000        True
+16738  WBGene00019189           0  ...    0.999989        True
+16739  WBGene00007069           0  ...    1.000000        True
+16740  WBGene00007068           0  ...    1.000000        True
+
+[16741 rows x 7 columns], 'sorted_probs':               gene_id  true_label  ...  confidence  is_correct
+0      WBGene00000159           1  ...    1.000000       False
+1      WBGene00022329           0  ...    1.000000        True
+2      WBGene00022332           0  ...    1.000000        True
+3      WBGene00022331           0  ...    1.000000        True
+4      WBGene00022327           0  ...    1.000000        True
+...               ...         ...  ...         ...         ...
+16736  WBGene00007637           0  ...    0.503098        True
+16737  WBGene00004237           0  ...    0.503046        True
+16738  WBGene00017980           0  ...    0.502830        True
+16739  WBGene00015283           0  ...    0.502311        True
+16740  WBGene00021011           0  ...    0.500935        True
+
+[16741 rows x 7 columns]}
+########## Start building garphs from seqs...
+########## Graph Built!
+########## Testing on 4173 samples...
+########## Testing completed. Outputs are saved in results!
+Bas
+{'metrics':    #Sample    TN   FP   FN  TP  ...  Precision  Recall  Accuracy    AUC     MCC
+0     4173  3427  384  293  69  ...     0.1523  0.1906    0.8378  0.607  0.0813
+
+[1 rows x 12 columns], 'probs':                                                 gene_id  ...  is_correct
+0     lcl|AL009126.3_cds_CAB13812.1_2031 [gene=desR]...  ...        True
+1     lcl|AL009126.3_cds_CAB12504.3_731 [gene=yeeI] ...  ...       False
+2     lcl|AL009126.3_cds_CAB14435.2_2649 [gene=yqgA]...  ...        True
+3     lcl|AL009126.3_cds_CAB15870.1_4052 [gene=ywaF]...  ...        True
+4     lcl|AL009126.3_cds_CAB14605.1_2821 [gene=czcO]...  ...        True
+...                                                 ...  ...         ...
+4168  lcl|AL009126.3_cds_CAB13622.1_1825 [gene=nrdE]...  ...       False
+4169  lcl|AL009126.3_cds_CAB12253.1_460 [gene=dctR] ...  ...       False
+4170  lcl|AL009126.3_cds_CAB14146.1_2365 [gene=yppC]...  ...        True
+4171  lcl|AL009126.3_cds_CAB14834.1_3050 [gene=araP]...  ...        True
+4172  lcl|AL009126.3_cds_CAB12897.1_1105 [gene=yhjN]...  ...        True
+
+[4173 rows x 7 columns], 'sorted_probs':                                                 gene_id  ...  is_correct
+0     lcl|AL009126.3_cds_CAB16039.3_4217 [gene=yxaC]...  ...        True
+1     lcl|AL009126.3_cds_CAB11856.1_80 [gene=yazB] [...  ...        True
+2     lcl|AL009126.3_cds_CAB15705.1_3893 [gene=atpI]...  ...        True
+3     lcl|AL009126.3_cds_CAB15059.1_3258 [gene=menH]...  ...        True
+4     lcl|AL009126.3_cds_CAB11921.2_146 [gene=ecfA] ...  ...        True
+...                                                 ...  ...         ...
+4168  lcl|AL009126.3_cds_CAB15835.1_4016 [gene=vpr] ...  ...        True
+4169  lcl|AL009126.3_cds_CAB11789.1_13 [gene=serS] [...  ...        True
+4170  lcl|AL009126.3_cds_CAB12918.1_1128 [gene=yisN]...  ...        True
+4171  lcl|AL009126.3_cds_CAB14946.1_3146 [gene=acsA]...  ...        True
+4172  lcl|AL009126.3_cds_CAB15239.1_3430 [gene=pucC]...  ...        True
+
+[4173 rows x 7 columns]}

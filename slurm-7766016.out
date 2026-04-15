@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/ara_ara_code.py", line 74, in <module>
+    graphs = build_dataset_bio(fasta, labels, k=K)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/seq_encoder.py", line 212, in build_dataset_bio
+    g = seq_to_graph_bio(seq, k)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/seq_encoder.py", line 162, in seq_to_graph_bio
+    kmer_bio_features(kmer) + [kmer_counts[kmer] / total_kmers]
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/seq_encoder.py", line 132, in kmer_bio_features
+    purine = (cnt['A'] + cnt['G']) / k
+              ^^^
+NameError: name 'cnt' is not defined. Did you mean: 'int'?

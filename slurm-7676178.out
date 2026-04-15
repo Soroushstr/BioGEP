@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/ara_ara_code.py", line 21, in <module>
+    results_test = test(graphs=test_graphs, model=model, model_path="ara_model.pt")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/new_pipeline.py", line 340, in test
+    y_pred.extend((probs[:, 1] >= best_threshold).astype(int))
+                                  ^^^^^^^^^^^^^^
+NameError: name 'best_threshold' is not defined

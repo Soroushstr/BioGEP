@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/ara_ara_code.py", line 17, in <module>
+    results = train(graphs_4, model, model_path="ara_model.pt")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/new_pipeline.py", line 236, in train
+    preds = (np.array(val_probs) >= t).astype(int)
+                      ^^^^^^^^^
+NameError: name 'val_probs' is not defined. Did you mean: 'val_loss'?

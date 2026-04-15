@@ -1,0 +1,6 @@
+########## Start building garphs from seqs...
+########## Graph Built!
+
+34364 graphs have been split: Train size: 27492, Validation size: 6872
+
+########## Training for 50 epochs on cuda...

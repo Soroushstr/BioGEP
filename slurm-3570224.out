@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/ara_ara_code.py", line 40, in <module>
+    results = train(graphs_5, model, model_path="ara_model.pt")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/pipeline.py", line 96, in train
+    out = model(batch)
+          ^^^^^^^^^^^^
+  File "/home/fs72129/imansamiei/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs72129/imansamiei/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/gnn_models.py", line 121, in forward
+    x = self.embedding(x_idx)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs72129/imansamiei/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs72129/imansamiei/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs72129/imansamiei/.local/lib/python3.12/site-packages/torch/nn/modules/sparse.py", line 192, in forward
+    return F.embedding(
+           ^^^^^^^^^^^^
+  File "/home/fs72129/imansamiei/.local/lib/python3.12/site-packages/torch/nn/functional.py", line 2542, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index out of range in self

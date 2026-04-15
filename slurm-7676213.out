@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/ara_ara_code.py", line 13, in <module>
+    train_graphs, vocab = build_dataset(orgA_fasta, orgA_labels, k=k)
+                                        ^^^^^^^^^^
+NameError: name 'orgA_fasta' is not defined
