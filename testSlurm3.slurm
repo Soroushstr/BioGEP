@@ -11,4 +11,4 @@
 module purge
 module load cuda/11.8.0-gcc-12.2.0-bplw5nu
 
-python ara_ara_code_v3.py > resultsMCC/cfix_8.txt
+python ara_ara_code_v7.py > resultsMCC/cfix_12.txt
