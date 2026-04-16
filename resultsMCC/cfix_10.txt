@@ -1,0 +1,348 @@
+============================================================
+Test species  : ['arabidopsis', 'saccharomyces']
+Val strategy  : 80/20 random split from training data
+k-mer size    : 4
+Approach      : v5 — Fixed Baseline (proper val split + focal + GRL)
+============================================================
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/elegans_genes.fasta (k=4)...
+########## 16741 graphs built!
+  elegans (id=0): 16741 graphs, 670 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/melanogaster_genes.fasta (k=4)...
+########## 7298 graphs built!
+  melanogaster (id=1): 7298 graphs, 414 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/musculus_genes.fasta (k=4)...
+########## 49132 graphs built!
+  musculus (id=2): 49132 graphs, 11247 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/maripaludis_genes.fasta (k=4)...
+########## 1590 graphs built!
+  maripaludis (id=3): 1590 graphs, 518 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/bacillus_genes.fasta (k=4)...
+########## 4173 graphs built!
+  bacillus (id=4): 4173 graphs, 362 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/sapiens_genes.fasta (k=4)...
+########## 12015 graphs built!
+  sapiens (id=5): 12015 graphs, 1516 essentials → TRAIN
+
+Total training graphs: 90949
+Training species     : 6
+
+90949 graphs have been split: Train size: 72760, Validation size: 18189
+Using Focal Loss (gamma=2.0) with class weights [0.5968924760818481, 3.080179452896118]
+
+########## Training for 200 epochs on cuda...
+- Epoch [001/200] Train Loss: 0.6119 | Train MCC: 0.004 | Train AUC: 0.683 | Train Acc: 0.501 | Val Loss: 0.2299 | Val MCC: 0.192 | Val AUC: 0.675 | Val Acc: 0.160 | EarlyStop: 0/30 | Time: 49.8s
++ New best MCC: 0.1920 (epoch 1)
+- Epoch [002/200] Train Loss: 0.5870 | Train MCC: 0.000 | Train AUC: 0.753 | Train Acc: 0.497 | Val Loss: 0.2241 | Val MCC: 0.220 | Val AUC: 0.701 | Val Acc: 0.160 | EarlyStop: 0/30 | Time: 49.0s
++ New best MCC: 0.2197 (epoch 2)
+- Epoch [003/200] Train Loss: 0.5781 | Train MCC: 0.000 | Train AUC: 0.778 | Train Acc: 0.499 | Val Loss: 0.2448 | Val MCC: 0.232 | Val AUC: 0.714 | Val Acc: 0.160 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.2323 (epoch 3)
+- Epoch [004/200] Train Loss: 0.5698 | Train MCC: 0.041 | Train AUC: 0.796 | Train Acc: 0.501 | Val Loss: 0.2460 | Val MCC: 0.248 | Val AUC: 0.727 | Val Acc: 0.160 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.2475 (epoch 4)
+- Epoch [005/200] Train Loss: 0.5623 | Train MCC: 0.198 | Train AUC: 0.811 | Train Acc: 0.541 | Val Loss: 0.2460 | Val MCC: 0.265 | Val AUC: 0.735 | Val Acc: 0.243 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.2654 (epoch 5)
+- Epoch [006/200] Train Loss: 0.5573 | Train MCC: 0.252 | Train AUC: 0.826 | Train Acc: 0.563 | Val Loss: 0.2518 | Val MCC: 0.281 | Val AUC: 0.744 | Val Acc: 0.238 | EarlyStop: 0/30 | Time: 49.3s
++ New best MCC: 0.2809 (epoch 6)
+- Epoch [007/200] Train Loss: 0.5450 | Train MCC: 0.322 | Train AUC: 0.839 | Train Acc: 0.599 | Val Loss: 0.2539 | Val MCC: 0.299 | Val AUC: 0.761 | Val Acc: 0.261 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.2992 (epoch 7)
+- Epoch [008/200] Train Loss: 0.5368 | Train MCC: 0.373 | Train AUC: 0.854 | Train Acc: 0.627 | Val Loss: 0.2293 | Val MCC: 0.305 | Val AUC: 0.768 | Val Acc: 0.319 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.3054 (epoch 8)
+- Epoch [009/200] Train Loss: 0.5258 | Train MCC: 0.419 | Train AUC: 0.868 | Train Acc: 0.656 | Val Loss: 0.2385 | Val MCC: 0.336 | Val AUC: 0.784 | Val Acc: 0.349 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.3361 (epoch 9)
+- Epoch [010/200] Train Loss: 0.5154 | Train MCC: 0.450 | Train AUC: 0.881 | Train Acc: 0.672 | Val Loss: 0.2502 | Val MCC: 0.344 | Val AUC: 0.790 | Val Acc: 0.317 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.3440 (epoch 10)
+- Epoch [011/200] Train Loss: 0.5098 | Train MCC: 0.457 | Train AUC: 0.887 | Train Acc: 0.678 | Val Loss: 0.2318 | Val MCC: 0.364 | Val AUC: 0.801 | Val Acc: 0.404 | EarlyStop: 0/30 | Time: 49.2s
++ New best MCC: 0.3638 (epoch 11)
+- Epoch [012/200] Train Loss: 0.5043 | Train MCC: 0.485 | Train AUC: 0.897 | Train Acc: 0.695 | Val Loss: 0.2034 | Val MCC: 0.389 | Val AUC: 0.808 | Val Acc: 0.455 | EarlyStop: 0/30 | Time: 49.2s
++ New best MCC: 0.3893 (epoch 12)
+- Epoch [013/200] Train Loss: 0.4970 | Train MCC: 0.505 | Train AUC: 0.905 | Train Acc: 0.707 | Val Loss: 0.2159 | Val MCC: 0.401 | Val AUC: 0.817 | Val Acc: 0.430 | EarlyStop: 0/30 | Time: 50.0s
++ New best MCC: 0.4013 (epoch 13)
+- Epoch [014/200] Train Loss: 0.4925 | Train MCC: 0.528 | Train AUC: 0.911 | Train Acc: 0.721 | Val Loss: 0.2139 | Val MCC: 0.418 | Val AUC: 0.824 | Val Acc: 0.412 | EarlyStop: 0/30 | Time: 49.4s
++ New best MCC: 0.4181 (epoch 14)
+- Epoch [015/200] Train Loss: 0.4892 | Train MCC: 0.538 | Train AUC: 0.916 | Train Acc: 0.728 | Val Loss: 0.2306 | Val MCC: 0.420 | Val AUC: 0.825 | Val Acc: 0.382 | EarlyStop: 0/30 | Time: 49.2s
++ New best MCC: 0.4196 (epoch 15)
+- Epoch [016/200] Train Loss: 0.4867 | Train MCC: 0.551 | Train AUC: 0.920 | Train Acc: 0.737 | Val Loss: 0.2080 | Val MCC: 0.431 | Val AUC: 0.829 | Val Acc: 0.472 | EarlyStop: 0/30 | Time: 49.3s
++ New best MCC: 0.4313 (epoch 16)
+- Epoch [017/200] Train Loss: 0.4824 | Train MCC: 0.572 | Train AUC: 0.925 | Train Acc: 0.750 | Val Loss: 0.2062 | Val MCC: 0.428 | Val AUC: 0.832 | Val Acc: 0.489 | EarlyStop: 0/30 | Time: 49.1s
+- Epoch [018/200] Train Loss: 0.4812 | Train MCC: 0.573 | Train AUC: 0.926 | Train Acc: 0.751 | Val Loss: 0.2063 | Val MCC: 0.459 | Val AUC: 0.836 | Val Acc: 0.479 | EarlyStop: 1/30 | Time: 49.2s
++ New best MCC: 0.4589 (epoch 18)
+- Epoch [019/200] Train Loss: 0.4733 | Train MCC: 0.596 | Train AUC: 0.933 | Train Acc: 0.766 | Val Loss: 0.1912 | Val MCC: 0.458 | Val AUC: 0.840 | Val Acc: 0.569 | EarlyStop: 0/30 | Time: 49.3s
+- Epoch [020/200] Train Loss: 0.4721 | Train MCC: 0.611 | Train AUC: 0.934 | Train Acc: 0.775 | Val Loss: 0.1977 | Val MCC: 0.464 | Val AUC: 0.845 | Val Acc: 0.581 | EarlyStop: 1/30 | Time: 49.3s
++ New best MCC: 0.4645 (epoch 20)
+- Epoch [021/200] Train Loss: 0.4712 | Train MCC: 0.611 | Train AUC: 0.937 | Train Acc: 0.775 | Val Loss: 0.1973 | Val MCC: 0.459 | Val AUC: 0.844 | Val Acc: 0.551 | EarlyStop: 0/30 | Time: 49.4s
+- Epoch [022/200] Train Loss: 0.4684 | Train MCC: 0.620 | Train AUC: 0.939 | Train Acc: 0.782 | Val Loss: 0.1956 | Val MCC: 0.481 | Val AUC: 0.849 | Val Acc: 0.544 | EarlyStop: 1/30 | Time: 49.4s
++ New best MCC: 0.4807 (epoch 22)
+- Epoch [023/200] Train Loss: 0.4675 | Train MCC: 0.623 | Train AUC: 0.940 | Train Acc: 0.783 | Val Loss: 0.2042 | Val MCC: 0.489 | Val AUC: 0.851 | Val Acc: 0.525 | EarlyStop: 0/30 | Time: 49.4s
++ New best MCC: 0.4888 (epoch 23)
+- Epoch [024/200] Train Loss: 0.4625 | Train MCC: 0.636 | Train AUC: 0.945 | Train Acc: 0.792 | Val Loss: 0.1903 | Val MCC: 0.494 | Val AUC: 0.855 | Val Acc: 0.560 | EarlyStop: 0/30 | Time: 49.2s
++ New best MCC: 0.4941 (epoch 24)
+- Epoch [025/200] Train Loss: 0.4607 | Train MCC: 0.637 | Train AUC: 0.947 | Train Acc: 0.793 | Val Loss: 0.1864 | Val MCC: 0.496 | Val AUC: 0.857 | Val Acc: 0.607 | EarlyStop: 0/30 | Time: 49.2s
++ New best MCC: 0.4960 (epoch 25)
+- Epoch [026/200] Train Loss: 0.4586 | Train MCC: 0.650 | Train AUC: 0.949 | Train Acc: 0.800 | Val Loss: 0.1905 | Val MCC: 0.499 | Val AUC: 0.860 | Val Acc: 0.589 | EarlyStop: 0/30 | Time: 49.3s
++ New best MCC: 0.4986 (epoch 26)
+- Epoch [027/200] Train Loss: 0.4573 | Train MCC: 0.653 | Train AUC: 0.950 | Train Acc: 0.802 | Val Loss: 0.1928 | Val MCC: 0.502 | Val AUC: 0.858 | Val Acc: 0.592 | EarlyStop: 0/30 | Time: 49.2s
++ New best MCC: 0.5023 (epoch 27)
+- Epoch [028/200] Train Loss: 0.4531 | Train MCC: 0.669 | Train AUC: 0.953 | Train Acc: 0.812 | Val Loss: 0.1788 | Val MCC: 0.523 | Val AUC: 0.864 | Val Acc: 0.608 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.5231 (epoch 28)
+- Epoch [029/200] Train Loss: 0.4545 | Train MCC: 0.667 | Train AUC: 0.952 | Train Acc: 0.811 | Val Loss: 0.1950 | Val MCC: 0.521 | Val AUC: 0.863 | Val Acc: 0.604 | EarlyStop: 0/30 | Time: 49.1s
+- Epoch [030/200] Train Loss: 0.4519 | Train MCC: 0.669 | Train AUC: 0.955 | Train Acc: 0.812 | Val Loss: 0.1980 | Val MCC: 0.529 | Val AUC: 0.866 | Val Acc: 0.596 | EarlyStop: 1/30 | Time: 49.2s
++ New best MCC: 0.5288 (epoch 30)
+- Epoch [031/200] Train Loss: 0.4508 | Train MCC: 0.679 | Train AUC: 0.955 | Train Acc: 0.818 | Val Loss: 0.1891 | Val MCC: 0.526 | Val AUC: 0.866 | Val Acc: 0.618 | EarlyStop: 0/30 | Time: 49.0s
+- Epoch [032/200] Train Loss: 0.4504 | Train MCC: 0.679 | Train AUC: 0.956 | Train Acc: 0.818 | Val Loss: 0.1856 | Val MCC: 0.550 | Val AUC: 0.870 | Val Acc: 0.592 | EarlyStop: 1/30 | Time: 49.1s
++ New best MCC: 0.5495 (epoch 32)
+- Epoch [033/200] Train Loss: 0.4488 | Train MCC: 0.678 | Train AUC: 0.958 | Train Acc: 0.818 | Val Loss: 0.2038 | Val MCC: 0.552 | Val AUC: 0.870 | Val Acc: 0.567 | EarlyStop: 0/30 | Time: 49.1s
++ New best MCC: 0.5520 (epoch 33)
+- Epoch [034/200] Train Loss: 0.4463 | Train MCC: 0.688 | Train AUC: 0.960 | Train Acc: 0.824 | Val Loss: 0.1848 | Val MCC: 0.543 | Val AUC: 0.871 | Val Acc: 0.651 | EarlyStop: 0/30 | Time: 48.9s
+- Epoch [035/200] Train Loss: 0.4460 | Train MCC: 0.693 | Train AUC: 0.961 | Train Acc: 0.827 | Val Loss: 0.1802 | Val MCC: 0.554 | Val AUC: 0.875 | Val Acc: 0.653 | EarlyStop: 1/30 | Time: 49.0s
++ New best MCC: 0.5542 (epoch 35)
+- Epoch [036/200] Train Loss: 0.4435 | Train MCC: 0.704 | Train AUC: 0.962 | Train Acc: 0.834 | Val Loss: 0.1797 | Val MCC: 0.561 | Val AUC: 0.877 | Val Acc: 0.652 | EarlyStop: 0/30 | Time: 49.0s
++ New best MCC: 0.5606 (epoch 36)
+- Epoch [037/200] Train Loss: 0.4424 | Train MCC: 0.704 | Train AUC: 0.963 | Train Acc: 0.834 | Val Loss: 0.1705 | Val MCC: 0.555 | Val AUC: 0.877 | Val Acc: 0.657 | EarlyStop: 0/30 | Time: 49.0s
+- Epoch [038/200] Train Loss: 0.4430 | Train MCC: 0.705 | Train AUC: 0.962 | Train Acc: 0.835 | Val Loss: 0.1963 | Val MCC: 0.563 | Val AUC: 0.876 | Val Acc: 0.592 | EarlyStop: 1/30 | Time: 48.8s
++ New best MCC: 0.5633 (epoch 38)
+- Epoch [039/200] Train Loss: 0.4420 | Train MCC: 0.707 | Train AUC: 0.964 | Train Acc: 0.836 | Val Loss: 0.1782 | Val MCC: 0.570 | Val AUC: 0.879 | Val Acc: 0.665 | EarlyStop: 0/30 | Time: 48.9s
++ New best MCC: 0.5696 (epoch 39)
+- Epoch [040/200] Train Loss: 0.4410 | Train MCC: 0.715 | Train AUC: 0.965 | Train Acc: 0.841 | Val Loss: 0.1894 | Val MCC: 0.574 | Val AUC: 0.879 | Val Acc: 0.634 | EarlyStop: 0/30 | Time: 48.9s
++ New best MCC: 0.5745 (epoch 40)
+- Epoch [041/200] Train Loss: 0.4414 | Train MCC: 0.716 | Train AUC: 0.965 | Train Acc: 0.842 | Val Loss: 0.1798 | Val MCC: 0.565 | Val AUC: 0.880 | Val Acc: 0.643 | EarlyStop: 0/30 | Time: 49.0s
+- Epoch [042/200] Train Loss: 0.4409 | Train MCC: 0.712 | Train AUC: 0.966 | Train Acc: 0.839 | Val Loss: 0.1668 | Val MCC: 0.573 | Val AUC: 0.880 | Val Acc: 0.675 | EarlyStop: 1/30 | Time: 48.9s
+- Epoch [043/200] Train Loss: 0.4403 | Train MCC: 0.715 | Train AUC: 0.966 | Train Acc: 0.841 | Val Loss: 0.1766 | Val MCC: 0.574 | Val AUC: 0.879 | Val Acc: 0.657 | EarlyStop: 2/30 | Time: 49.1s
+- Epoch [044/200] Train Loss: 0.4383 | Train MCC: 0.722 | Train AUC: 0.968 | Train Acc: 0.845 | Val Loss: 0.1759 | Val MCC: 0.581 | Val AUC: 0.882 | Val Acc: 0.666 | EarlyStop: 3/30 | Time: 48.9s
++ New best MCC: 0.5811 (epoch 44)
+- Epoch [045/200] Train Loss: 0.4363 | Train MCC: 0.728 | Train AUC: 0.969 | Train Acc: 0.849 | Val Loss: 0.1691 | Val MCC: 0.574 | Val AUC: 0.883 | Val Acc: 0.733 | EarlyStop: 0/30 | Time: 49.0s
+- Epoch [046/200] Train Loss: 0.4359 | Train MCC: 0.728 | Train AUC: 0.969 | Train Acc: 0.849 | Val Loss: 0.1772 | Val MCC: 0.590 | Val AUC: 0.884 | Val Acc: 0.709 | EarlyStop: 1/30 | Time: 48.8s
++ New best MCC: 0.5899 (epoch 46)
+- Epoch [047/200] Train Loss: 0.4355 | Train MCC: 0.734 | Train AUC: 0.969 | Train Acc: 0.852 | Val Loss: 0.1726 | Val MCC: 0.592 | Val AUC: 0.884 | Val Acc: 0.686 | EarlyStop: 0/30 | Time: 48.9s
++ New best MCC: 0.5923 (epoch 47)
+- Epoch [048/200] Train Loss: 0.4355 | Train MCC: 0.733 | Train AUC: 0.970 | Train Acc: 0.852 | Val Loss: 0.1761 | Val MCC: 0.589 | Val AUC: 0.884 | Val Acc: 0.663 | EarlyStop: 0/30 | Time: 49.0s
+- Epoch [049/200] Train Loss: 0.4337 | Train MCC: 0.740 | Train AUC: 0.971 | Train Acc: 0.856 | Val Loss: 0.1789 | Val MCC: 0.607 | Val AUC: 0.885 | Val Acc: 0.667 | EarlyStop: 1/30 | Time: 48.9s
++ New best MCC: 0.6071 (epoch 49)
+- Epoch [050/200] Train Loss: 0.4337 | Train MCC: 0.741 | Train AUC: 0.971 | Train Acc: 0.856 | Val Loss: 0.1705 | Val MCC: 0.606 | Val AUC: 0.888 | Val Acc: 0.699 | EarlyStop: 0/30 | Time: 49.0s
+- Epoch [051/200] Train Loss: 0.4333 | Train MCC: 0.741 | Train AUC: 0.971 | Train Acc: 0.857 | Val Loss: 0.1684 | Val MCC: 0.600 | Val AUC: 0.888 | Val Acc: 0.709 | EarlyStop: 1/30 | Time: 48.7s
+- Epoch [052/200] Train Loss: 0.4314 | Train MCC: 0.746 | Train AUC: 0.973 | Train Acc: 0.860 | Val Loss: 0.1754 | Val MCC: 0.593 | Val AUC: 0.886 | Val Acc: 0.699 | EarlyStop: 2/30 | Time: 49.0s
+- Epoch [053/200] Train Loss: 0.4326 | Train MCC: 0.747 | Train AUC: 0.972 | Train Acc: 0.861 | Val Loss: 0.1669 | Val MCC: 0.606 | Val AUC: 0.889 | Val Acc: 0.712 | EarlyStop: 3/30 | Time: 48.8s
+- Epoch [054/200] Train Loss: 0.4302 | Train MCC: 0.754 | Train AUC: 0.973 | Train Acc: 0.864 | Val Loss: 0.1707 | Val MCC: 0.604 | Val AUC: 0.890 | Val Acc: 0.725 | EarlyStop: 4/30 | Time: 48.9s
+- Epoch [055/200] Train Loss: 0.4294 | Train MCC: 0.755 | Train AUC: 0.975 | Train Acc: 0.865 | Val Loss: 0.1722 | Val MCC: 0.616 | Val AUC: 0.892 | Val Acc: 0.687 | EarlyStop: 5/30 | Time: 48.8s
++ New best MCC: 0.6159 (epoch 55)
+- Epoch [056/200] Train Loss: 0.4311 | Train MCC: 0.753 | Train AUC: 0.974 | Train Acc: 0.864 | Val Loss: 0.1675 | Val MCC: 0.619 | Val AUC: 0.892 | Val Acc: 0.715 | EarlyStop: 0/30 | Time: 48.9s
++ New best MCC: 0.6193 (epoch 56)
+- Epoch [057/200] Train Loss: 0.4313 | Train MCC: 0.752 | Train AUC: 0.973 | Train Acc: 0.863 | Val Loss: 0.1641 | Val MCC: 0.613 | Val AUC: 0.892 | Val Acc: 0.720 | EarlyStop: 0/30 | Time: 48.8s
+- Epoch [058/200] Train Loss: 0.4288 | Train MCC: 0.758 | Train AUC: 0.975 | Train Acc: 0.867 | Val Loss: 0.1662 | Val MCC: 0.608 | Val AUC: 0.891 | Val Acc: 0.727 | EarlyStop: 1/30 | Time: 48.7s
+- Epoch [059/200] Train Loss: 0.4284 | Train MCC: 0.761 | Train AUC: 0.975 | Train Acc: 0.869 | Val Loss: 0.1690 | Val MCC: 0.614 | Val AUC: 0.890 | Val Acc: 0.718 | EarlyStop: 2/30 | Time: 48.8s
+- Epoch [060/200] Train Loss: 0.4289 | Train MCC: 0.761 | Train AUC: 0.975 | Train Acc: 0.869 | Val Loss: 0.1775 | Val MCC: 0.606 | Val AUC: 0.890 | Val Acc: 0.686 | EarlyStop: 3/30 | Time: 48.4s
+- Epoch [061/200] Train Loss: 0.4275 | Train MCC: 0.766 | Train AUC: 0.976 | Train Acc: 0.872 | Val Loss: 0.1710 | Val MCC: 0.612 | Val AUC: 0.892 | Val Acc: 0.719 | EarlyStop: 4/30 | Time: 48.5s
+- Epoch [062/200] Train Loss: 0.4270 | Train MCC: 0.763 | Train AUC: 0.977 | Train Acc: 0.870 | Val Loss: 0.1712 | Val MCC: 0.625 | Val AUC: 0.892 | Val Acc: 0.757 | EarlyStop: 5/30 | Time: 48.5s
++ New best MCC: 0.6249 (epoch 62)
+- Epoch [063/200] Train Loss: 0.4260 | Train MCC: 0.773 | Train AUC: 0.977 | Train Acc: 0.876 | Val Loss: 0.1696 | Val MCC: 0.620 | Val AUC: 0.892 | Val Acc: 0.735 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [064/200] Train Loss: 0.4255 | Train MCC: 0.773 | Train AUC: 0.977 | Train Acc: 0.875 | Val Loss: 0.1666 | Val MCC: 0.623 | Val AUC: 0.891 | Val Acc: 0.722 | EarlyStop: 1/30 | Time: 48.4s
+- Epoch [065/200] Train Loss: 0.4265 | Train MCC: 0.770 | Train AUC: 0.977 | Train Acc: 0.874 | Val Loss: 0.1712 | Val MCC: 0.624 | Val AUC: 0.893 | Val Acc: 0.713 | EarlyStop: 2/30 | Time: 48.3s
+- Epoch [066/200] Train Loss: 0.4250 | Train MCC: 0.774 | Train AUC: 0.978 | Train Acc: 0.876 | Val Loss: 0.1738 | Val MCC: 0.626 | Val AUC: 0.894 | Val Acc: 0.721 | EarlyStop: 3/30 | Time: 48.3s
++ New best MCC: 0.6262 (epoch 66)
+- Epoch [067/200] Train Loss: 0.4244 | Train MCC: 0.775 | Train AUC: 0.978 | Train Acc: 0.877 | Val Loss: 0.1670 | Val MCC: 0.638 | Val AUC: 0.895 | Val Acc: 0.753 | EarlyStop: 0/30 | Time: 48.5s
++ New best MCC: 0.6381 (epoch 67)
+- Epoch [068/200] Train Loss: 0.4238 | Train MCC: 0.776 | Train AUC: 0.979 | Train Acc: 0.878 | Val Loss: 0.1683 | Val MCC: 0.624 | Val AUC: 0.895 | Val Acc: 0.762 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [069/200] Train Loss: 0.4232 | Train MCC: 0.778 | Train AUC: 0.980 | Train Acc: 0.879 | Val Loss: 0.1650 | Val MCC: 0.635 | Val AUC: 0.894 | Val Acc: 0.755 | EarlyStop: 1/30 | Time: 48.5s
+- Epoch [070/200] Train Loss: 0.4238 | Train MCC: 0.780 | Train AUC: 0.979 | Train Acc: 0.880 | Val Loss: 0.1662 | Val MCC: 0.630 | Val AUC: 0.896 | Val Acc: 0.756 | EarlyStop: 2/30 | Time: 48.3s
+- Epoch [071/200] Train Loss: 0.4229 | Train MCC: 0.780 | Train AUC: 0.979 | Train Acc: 0.880 | Val Loss: 0.1650 | Val MCC: 0.636 | Val AUC: 0.895 | Val Acc: 0.747 | EarlyStop: 3/30 | Time: 48.5s
+- Epoch [072/200] Train Loss: 0.4228 | Train MCC: 0.781 | Train AUC: 0.980 | Train Acc: 0.881 | Val Loss: 0.1659 | Val MCC: 0.632 | Val AUC: 0.897 | Val Acc: 0.770 | EarlyStop: 4/30 | Time: 48.4s
+- Epoch [073/200] Train Loss: 0.4213 | Train MCC: 0.785 | Train AUC: 0.980 | Train Acc: 0.883 | Val Loss: 0.1638 | Val MCC: 0.640 | Val AUC: 0.897 | Val Acc: 0.761 | EarlyStop: 5/30 | Time: 48.4s
++ New best MCC: 0.6395 (epoch 73)
+- Epoch [074/200] Train Loss: 0.4216 | Train MCC: 0.788 | Train AUC: 0.980 | Train Acc: 0.884 | Val Loss: 0.1617 | Val MCC: 0.634 | Val AUC: 0.898 | Val Acc: 0.762 | EarlyStop: 0/30 | Time: 48.5s
+- Epoch [075/200] Train Loss: 0.4207 | Train MCC: 0.789 | Train AUC: 0.981 | Train Acc: 0.885 | Val Loss: 0.1666 | Val MCC: 0.636 | Val AUC: 0.899 | Val Acc: 0.757 | EarlyStop: 1/30 | Time: 48.4s
+- Epoch [076/200] Train Loss: 0.4184 | Train MCC: 0.795 | Train AUC: 0.982 | Train Acc: 0.888 | Val Loss: 0.1667 | Val MCC: 0.634 | Val AUC: 0.899 | Val Acc: 0.765 | EarlyStop: 2/30 | Time: 48.5s
+- Epoch [077/200] Train Loss: 0.4202 | Train MCC: 0.792 | Train AUC: 0.981 | Train Acc: 0.887 | Val Loss: 0.1664 | Val MCC: 0.657 | Val AUC: 0.897 | Val Acc: 0.752 | EarlyStop: 3/30 | Time: 48.5s
++ New best MCC: 0.6568 (epoch 77)
+- Epoch [078/200] Train Loss: 0.4194 | Train MCC: 0.796 | Train AUC: 0.982 | Train Acc: 0.889 | Val Loss: 0.1717 | Val MCC: 0.643 | Val AUC: 0.895 | Val Acc: 0.739 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [079/200] Train Loss: 0.4177 | Train MCC: 0.797 | Train AUC: 0.983 | Train Acc: 0.890 | Val Loss: 0.1683 | Val MCC: 0.647 | Val AUC: 0.898 | Val Acc: 0.741 | EarlyStop: 1/30 | Time: 48.4s
+- Epoch [080/200] Train Loss: 0.4177 | Train MCC: 0.800 | Train AUC: 0.983 | Train Acc: 0.891 | Val Loss: 0.1653 | Val MCC: 0.654 | Val AUC: 0.899 | Val Acc: 0.759 | EarlyStop: 2/30 | Time: 48.4s
+- Epoch [081/200] Train Loss: 0.4175 | Train MCC: 0.803 | Train AUC: 0.983 | Train Acc: 0.893 | Val Loss: 0.1678 | Val MCC: 0.658 | Val AUC: 0.899 | Val Acc: 0.755 | EarlyStop: 3/30 | Time: 48.4s
++ New best MCC: 0.6575 (epoch 81)
+- Epoch [082/200] Train Loss: 0.4176 | Train MCC: 0.804 | Train AUC: 0.983 | Train Acc: 0.894 | Val Loss: 0.1668 | Val MCC: 0.662 | Val AUC: 0.901 | Val Acc: 0.766 | EarlyStop: 0/30 | Time: 48.6s
++ New best MCC: 0.6619 (epoch 82)
+- Epoch [083/200] Train Loss: 0.4183 | Train MCC: 0.800 | Train AUC: 0.982 | Train Acc: 0.892 | Val Loss: 0.1632 | Val MCC: 0.649 | Val AUC: 0.900 | Val Acc: 0.777 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [084/200] Train Loss: 0.4178 | Train MCC: 0.799 | Train AUC: 0.983 | Train Acc: 0.891 | Val Loss: 0.1623 | Val MCC: 0.651 | Val AUC: 0.901 | Val Acc: 0.755 | EarlyStop: 1/30 | Time: 48.5s
+- Epoch [085/200] Train Loss: 0.4176 | Train MCC: 0.802 | Train AUC: 0.983 | Train Acc: 0.893 | Val Loss: 0.1649 | Val MCC: 0.641 | Val AUC: 0.899 | Val Acc: 0.755 | EarlyStop: 2/30 | Time: 48.4s
+- Epoch [086/200] Train Loss: 0.4155 | Train MCC: 0.807 | Train AUC: 0.984 | Train Acc: 0.896 | Val Loss: 0.1637 | Val MCC: 0.656 | Val AUC: 0.900 | Val Acc: 0.780 | EarlyStop: 3/30 | Time: 48.4s
+- Epoch [087/200] Train Loss: 0.4154 | Train MCC: 0.807 | Train AUC: 0.984 | Train Acc: 0.896 | Val Loss: 0.1635 | Val MCC: 0.664 | Val AUC: 0.903 | Val Acc: 0.784 | EarlyStop: 4/30 | Time: 48.5s
++ New best MCC: 0.6638 (epoch 87)
+- Epoch [088/200] Train Loss: 0.4145 | Train MCC: 0.814 | Train AUC: 0.984 | Train Acc: 0.900 | Val Loss: 0.1646 | Val MCC: 0.662 | Val AUC: 0.901 | Val Acc: 0.779 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [089/200] Train Loss: 0.4160 | Train MCC: 0.806 | Train AUC: 0.984 | Train Acc: 0.895 | Val Loss: 0.1608 | Val MCC: 0.667 | Val AUC: 0.903 | Val Acc: 0.776 | EarlyStop: 1/30 | Time: 48.5s
++ New best MCC: 0.6671 (epoch 89)
+- Epoch [090/200] Train Loss: 0.4160 | Train MCC: 0.809 | Train AUC: 0.984 | Train Acc: 0.896 | Val Loss: 0.1634 | Val MCC: 0.669 | Val AUC: 0.903 | Val Acc: 0.748 | EarlyStop: 0/30 | Time: 48.3s
++ New best MCC: 0.6685 (epoch 90)
+- Epoch [091/200] Train Loss: 0.4151 | Train MCC: 0.811 | Train AUC: 0.984 | Train Acc: 0.898 | Val Loss: 0.1585 | Val MCC: 0.673 | Val AUC: 0.905 | Val Acc: 0.772 | EarlyStop: 0/30 | Time: 48.6s
++ New best MCC: 0.6730 (epoch 91)
+- Epoch [092/200] Train Loss: 0.4140 | Train MCC: 0.812 | Train AUC: 0.985 | Train Acc: 0.899 | Val Loss: 0.1610 | Val MCC: 0.667 | Val AUC: 0.905 | Val Acc: 0.763 | EarlyStop: 0/30 | Time: 48.3s
+- Epoch [093/200] Train Loss: 0.4129 | Train MCC: 0.817 | Train AUC: 0.986 | Train Acc: 0.901 | Val Loss: 0.1595 | Val MCC: 0.665 | Val AUC: 0.904 | Val Acc: 0.758 | EarlyStop: 1/30 | Time: 48.4s
+- Epoch [094/200] Train Loss: 0.4136 | Train MCC: 0.814 | Train AUC: 0.985 | Train Acc: 0.900 | Val Loss: 0.1638 | Val MCC: 0.660 | Val AUC: 0.904 | Val Acc: 0.785 | EarlyStop: 2/30 | Time: 48.3s
+- Epoch [095/200] Train Loss: 0.4120 | Train MCC: 0.820 | Train AUC: 0.986 | Train Acc: 0.903 | Val Loss: 0.1640 | Val MCC: 0.663 | Val AUC: 0.906 | Val Acc: 0.775 | EarlyStop: 3/30 | Time: 48.5s
+- Epoch [096/200] Train Loss: 0.4127 | Train MCC: 0.819 | Train AUC: 0.985 | Train Acc: 0.903 | Val Loss: 0.1642 | Val MCC: 0.670 | Val AUC: 0.903 | Val Acc: 0.762 | EarlyStop: 4/30 | Time: 48.4s
+- Epoch [097/200] Train Loss: 0.4126 | Train MCC: 0.820 | Train AUC: 0.985 | Train Acc: 0.903 | Val Loss: 0.1636 | Val MCC: 0.665 | Val AUC: 0.905 | Val Acc: 0.792 | EarlyStop: 5/30 | Time: 48.4s
+- Epoch [098/200] Train Loss: 0.4117 | Train MCC: 0.820 | Train AUC: 0.986 | Train Acc: 0.903 | Val Loss: 0.1627 | Val MCC: 0.678 | Val AUC: 0.906 | Val Acc: 0.798 | EarlyStop: 6/30 | Time: 48.5s
++ New best MCC: 0.6777 (epoch 98)
+- Epoch [099/200] Train Loss: 0.4110 | Train MCC: 0.823 | Train AUC: 0.987 | Train Acc: 0.905 | Val Loss: 0.1653 | Val MCC: 0.669 | Val AUC: 0.905 | Val Acc: 0.798 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [100/200] Train Loss: 0.4113 | Train MCC: 0.827 | Train AUC: 0.987 | Train Acc: 0.907 | Val Loss: 0.1630 | Val MCC: 0.679 | Val AUC: 0.906 | Val Acc: 0.780 | EarlyStop: 1/30 | Time: 48.4s
++ New best MCC: 0.6791 (epoch 100)
+- Epoch [101/200] Train Loss: 0.4102 | Train MCC: 0.826 | Train AUC: 0.987 | Train Acc: 0.906 | Val Loss: 0.1681 | Val MCC: 0.676 | Val AUC: 0.905 | Val Acc: 0.807 | EarlyStop: 0/30 | Time: 48.5s
+- Epoch [102/200] Train Loss: 0.4103 | Train MCC: 0.827 | Train AUC: 0.987 | Train Acc: 0.907 | Val Loss: 0.1639 | Val MCC: 0.677 | Val AUC: 0.906 | Val Acc: 0.784 | EarlyStop: 1/30 | Time: 48.3s
+- Epoch [103/200] Train Loss: 0.4098 | Train MCC: 0.828 | Train AUC: 0.987 | Train Acc: 0.908 | Val Loss: 0.1641 | Val MCC: 0.688 | Val AUC: 0.907 | Val Acc: 0.808 | EarlyStop: 2/30 | Time: 48.4s
++ New best MCC: 0.6876 (epoch 103)
+- Epoch [104/200] Train Loss: 0.4096 | Train MCC: 0.828 | Train AUC: 0.987 | Train Acc: 0.908 | Val Loss: 0.1656 | Val MCC: 0.676 | Val AUC: 0.906 | Val Acc: 0.802 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [105/200] Train Loss: 0.4107 | Train MCC: 0.828 | Train AUC: 0.987 | Train Acc: 0.908 | Val Loss: 0.1616 | Val MCC: 0.684 | Val AUC: 0.906 | Val Acc: 0.762 | EarlyStop: 1/30 | Time: 48.5s
+- Epoch [106/200] Train Loss: 0.4096 | Train MCC: 0.827 | Train AUC: 0.987 | Train Acc: 0.907 | Val Loss: 0.1635 | Val MCC: 0.683 | Val AUC: 0.907 | Val Acc: 0.780 | EarlyStop: 2/30 | Time: 48.5s
+- Epoch [107/200] Train Loss: 0.4077 | Train MCC: 0.832 | Train AUC: 0.988 | Train Acc: 0.910 | Val Loss: 0.1676 | Val MCC: 0.680 | Val AUC: 0.906 | Val Acc: 0.784 | EarlyStop: 3/30 | Time: 48.6s
+- Epoch [108/200] Train Loss: 0.4097 | Train MCC: 0.830 | Train AUC: 0.987 | Train Acc: 0.909 | Val Loss: 0.1659 | Val MCC: 0.675 | Val AUC: 0.906 | Val Acc: 0.768 | EarlyStop: 4/30 | Time: 48.4s
+- Epoch [109/200] Train Loss: 0.4091 | Train MCC: 0.833 | Train AUC: 0.987 | Train Acc: 0.910 | Val Loss: 0.1637 | Val MCC: 0.682 | Val AUC: 0.908 | Val Acc: 0.785 | EarlyStop: 5/30 | Time: 48.5s
+- Epoch [110/200] Train Loss: 0.4067 | Train MCC: 0.837 | Train AUC: 0.988 | Train Acc: 0.913 | Val Loss: 0.1675 | Val MCC: 0.676 | Val AUC: 0.908 | Val Acc: 0.806 | EarlyStop: 6/30 | Time: 48.5s
+- Epoch [111/200] Train Loss: 0.4063 | Train MCC: 0.841 | Train AUC: 0.988 | Train Acc: 0.915 | Val Loss: 0.1671 | Val MCC: 0.686 | Val AUC: 0.908 | Val Acc: 0.794 | EarlyStop: 7/30 | Time: 48.4s
+- Epoch [112/200] Train Loss: 0.4089 | Train MCC: 0.834 | Train AUC: 0.988 | Train Acc: 0.911 | Val Loss: 0.1654 | Val MCC: 0.681 | Val AUC: 0.906 | Val Acc: 0.797 | EarlyStop: 8/30 | Time: 48.6s
+- Epoch [113/200] Train Loss: 0.4078 | Train MCC: 0.832 | Train AUC: 0.988 | Train Acc: 0.910 | Val Loss: 0.1622 | Val MCC: 0.686 | Val AUC: 0.907 | Val Acc: 0.797 | EarlyStop: 9/30 | Time: 48.4s
+- Epoch [114/200] Train Loss: 0.4057 | Train MCC: 0.841 | Train AUC: 0.989 | Train Acc: 0.915 | Val Loss: 0.1632 | Val MCC: 0.691 | Val AUC: 0.909 | Val Acc: 0.792 | EarlyStop: 10/30 | Time: 48.5s
++ New best MCC: 0.6911 (epoch 114)
+- Epoch [115/200] Train Loss: 0.4053 | Train MCC: 0.845 | Train AUC: 0.989 | Train Acc: 0.917 | Val Loss: 0.1662 | Val MCC: 0.685 | Val AUC: 0.908 | Val Acc: 0.799 | EarlyStop: 0/30 | Time: 48.5s
+- Epoch [116/200] Train Loss: 0.4066 | Train MCC: 0.841 | Train AUC: 0.988 | Train Acc: 0.915 | Val Loss: 0.1624 | Val MCC: 0.692 | Val AUC: 0.908 | Val Acc: 0.800 | EarlyStop: 1/30 | Time: 48.4s
++ New best MCC: 0.6924 (epoch 116)
+- Epoch [117/200] Train Loss: 0.4069 | Train MCC: 0.839 | Train AUC: 0.988 | Train Acc: 0.914 | Val Loss: 0.1626 | Val MCC: 0.690 | Val AUC: 0.909 | Val Acc: 0.815 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [118/200] Train Loss: 0.4059 | Train MCC: 0.843 | Train AUC: 0.989 | Train Acc: 0.916 | Val Loss: 0.1664 | Val MCC: 0.691 | Val AUC: 0.909 | Val Acc: 0.805 | EarlyStop: 1/30 | Time: 48.4s
+- Epoch [119/200] Train Loss: 0.4061 | Train MCC: 0.841 | Train AUC: 0.989 | Train Acc: 0.915 | Val Loss: 0.1669 | Val MCC: 0.696 | Val AUC: 0.909 | Val Acc: 0.806 | EarlyStop: 2/30 | Time: 48.4s
++ New best MCC: 0.6959 (epoch 119)
+- Epoch [120/200] Train Loss: 0.4037 | Train MCC: 0.850 | Train AUC: 0.990 | Train Acc: 0.920 | Val Loss: 0.1694 | Val MCC: 0.693 | Val AUC: 0.908 | Val Acc: 0.806 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [121/200] Train Loss: 0.4046 | Train MCC: 0.849 | Train AUC: 0.989 | Train Acc: 0.919 | Val Loss: 0.1675 | Val MCC: 0.698 | Val AUC: 0.909 | Val Acc: 0.812 | EarlyStop: 1/30 | Time: 48.5s
++ New best MCC: 0.6982 (epoch 121)
+- Epoch [122/200] Train Loss: 0.4039 | Train MCC: 0.849 | Train AUC: 0.990 | Train Acc: 0.919 | Val Loss: 0.1715 | Val MCC: 0.688 | Val AUC: 0.908 | Val Acc: 0.814 | EarlyStop: 0/30 | Time: 48.5s
+- Epoch [123/200] Train Loss: 0.4035 | Train MCC: 0.852 | Train AUC: 0.990 | Train Acc: 0.921 | Val Loss: 0.1649 | Val MCC: 0.703 | Val AUC: 0.910 | Val Acc: 0.805 | EarlyStop: 1/30 | Time: 48.6s
++ New best MCC: 0.7025 (epoch 123)
+- Epoch [124/200] Train Loss: 0.4037 | Train MCC: 0.849 | Train AUC: 0.990 | Train Acc: 0.920 | Val Loss: 0.1662 | Val MCC: 0.700 | Val AUC: 0.909 | Val Acc: 0.804 | EarlyStop: 0/30 | Time: 48.5s
+- Epoch [125/200] Train Loss: 0.4039 | Train MCC: 0.847 | Train AUC: 0.990 | Train Acc: 0.919 | Val Loss: 0.1654 | Val MCC: 0.701 | Val AUC: 0.910 | Val Acc: 0.802 | EarlyStop: 1/30 | Time: 48.5s
+- Epoch [126/200] Train Loss: 0.4030 | Train MCC: 0.852 | Train AUC: 0.990 | Train Acc: 0.921 | Val Loss: 0.1654 | Val MCC: 0.699 | Val AUC: 0.910 | Val Acc: 0.803 | EarlyStop: 2/30 | Time: 48.3s
+- Epoch [127/200] Train Loss: 0.4043 | Train MCC: 0.849 | Train AUC: 0.990 | Train Acc: 0.920 | Val Loss: 0.1631 | Val MCC: 0.701 | Val AUC: 0.910 | Val Acc: 0.813 | EarlyStop: 3/30 | Time: 48.4s
+- Epoch [128/200] Train Loss: 0.4040 | Train MCC: 0.851 | Train AUC: 0.989 | Train Acc: 0.921 | Val Loss: 0.1666 | Val MCC: 0.699 | Val AUC: 0.910 | Val Acc: 0.808 | EarlyStop: 4/30 | Time: 48.5s
+- Epoch [129/200] Train Loss: 0.4020 | Train MCC: 0.857 | Train AUC: 0.990 | Train Acc: 0.924 | Val Loss: 0.1686 | Val MCC: 0.702 | Val AUC: 0.909 | Val Acc: 0.826 | EarlyStop: 5/30 | Time: 48.3s
+- Epoch [130/200] Train Loss: 0.4024 | Train MCC: 0.856 | Train AUC: 0.990 | Train Acc: 0.924 | Val Loss: 0.1667 | Val MCC: 0.701 | Val AUC: 0.910 | Val Acc: 0.798 | EarlyStop: 6/30 | Time: 48.6s
+- Epoch [131/200] Train Loss: 0.4018 | Train MCC: 0.857 | Train AUC: 0.991 | Train Acc: 0.924 | Val Loss: 0.1687 | Val MCC: 0.699 | Val AUC: 0.910 | Val Acc: 0.805 | EarlyStop: 7/30 | Time: 48.4s
+- Epoch [132/200] Train Loss: 0.4014 | Train MCC: 0.859 | Train AUC: 0.990 | Train Acc: 0.925 | Val Loss: 0.1701 | Val MCC: 0.703 | Val AUC: 0.911 | Val Acc: 0.825 | EarlyStop: 8/30 | Time: 48.5s
++ New best MCC: 0.7031 (epoch 132)
+- Epoch [133/200] Train Loss: 0.4027 | Train MCC: 0.855 | Train AUC: 0.990 | Train Acc: 0.923 | Val Loss: 0.1681 | Val MCC: 0.700 | Val AUC: 0.910 | Val Acc: 0.824 | EarlyStop: 0/30 | Time: 48.3s
+- Epoch [134/200] Train Loss: 0.4015 | Train MCC: 0.859 | Train AUC: 0.991 | Train Acc: 0.925 | Val Loss: 0.1714 | Val MCC: 0.701 | Val AUC: 0.911 | Val Acc: 0.834 | EarlyStop: 1/30 | Time: 48.3s
+- Epoch [135/200] Train Loss: 0.4025 | Train MCC: 0.858 | Train AUC: 0.990 | Train Acc: 0.925 | Val Loss: 0.1665 | Val MCC: 0.706 | Val AUC: 0.910 | Val Acc: 0.823 | EarlyStop: 2/30 | Time: 48.4s
++ New best MCC: 0.7057 (epoch 135)
+- Epoch [136/200] Train Loss: 0.4006 | Train MCC: 0.858 | Train AUC: 0.991 | Train Acc: 0.925 | Val Loss: 0.1675 | Val MCC: 0.701 | Val AUC: 0.911 | Val Acc: 0.816 | EarlyStop: 0/30 | Time: 48.6s
+- Epoch [137/200] Train Loss: 0.4003 | Train MCC: 0.860 | Train AUC: 0.991 | Train Acc: 0.926 | Val Loss: 0.1680 | Val MCC: 0.713 | Val AUC: 0.912 | Val Acc: 0.817 | EarlyStop: 1/30 | Time: 48.4s
++ New best MCC: 0.7132 (epoch 137)
+- Epoch [138/200] Train Loss: 0.4000 | Train MCC: 0.861 | Train AUC: 0.991 | Train Acc: 0.926 | Val Loss: 0.1679 | Val MCC: 0.709 | Val AUC: 0.912 | Val Acc: 0.820 | EarlyStop: 0/30 | Time: 48.5s
+- Epoch [139/200] Train Loss: 0.4004 | Train MCC: 0.860 | Train AUC: 0.991 | Train Acc: 0.926 | Val Loss: 0.1670 | Val MCC: 0.710 | Val AUC: 0.912 | Val Acc: 0.828 | EarlyStop: 1/30 | Time: 48.7s
+- Epoch [140/200] Train Loss: 0.4014 | Train MCC: 0.859 | Train AUC: 0.991 | Train Acc: 0.925 | Val Loss: 0.1673 | Val MCC: 0.708 | Val AUC: 0.912 | Val Acc: 0.839 | EarlyStop: 2/30 | Time: 48.5s
+- Epoch [141/200] Train Loss: 0.3994 | Train MCC: 0.865 | Train AUC: 0.991 | Train Acc: 0.929 | Val Loss: 0.1665 | Val MCC: 0.709 | Val AUC: 0.912 | Val Acc: 0.821 | EarlyStop: 3/30 | Time: 48.3s
+- Epoch [142/200] Train Loss: 0.3994 | Train MCC: 0.864 | Train AUC: 0.992 | Train Acc: 0.928 | Val Loss: 0.1669 | Val MCC: 0.707 | Val AUC: 0.912 | Val Acc: 0.817 | EarlyStop: 4/30 | Time: 48.5s
+- Epoch [143/200] Train Loss: 0.3989 | Train MCC: 0.868 | Train AUC: 0.992 | Train Acc: 0.930 | Val Loss: 0.1660 | Val MCC: 0.715 | Val AUC: 0.912 | Val Acc: 0.818 | EarlyStop: 5/30 | Time: 48.5s
++ New best MCC: 0.7147 (epoch 143)
+- Epoch [144/200] Train Loss: 0.3987 | Train MCC: 0.867 | Train AUC: 0.992 | Train Acc: 0.930 | Val Loss: 0.1680 | Val MCC: 0.705 | Val AUC: 0.912 | Val Acc: 0.828 | EarlyStop: 0/30 | Time: 48.3s
+- Epoch [145/200] Train Loss: 0.3996 | Train MCC: 0.865 | Train AUC: 0.991 | Train Acc: 0.929 | Val Loss: 0.1673 | Val MCC: 0.710 | Val AUC: 0.912 | Val Acc: 0.832 | EarlyStop: 1/30 | Time: 48.4s
+- Epoch [146/200] Train Loss: 0.3976 | Train MCC: 0.869 | Train AUC: 0.992 | Train Acc: 0.931 | Val Loss: 0.1701 | Val MCC: 0.710 | Val AUC: 0.912 | Val Acc: 0.827 | EarlyStop: 2/30 | Time: 48.5s
+- Epoch [147/200] Train Loss: 0.3991 | Train MCC: 0.867 | Train AUC: 0.992 | Train Acc: 0.930 | Val Loss: 0.1675 | Val MCC: 0.711 | Val AUC: 0.913 | Val Acc: 0.831 | EarlyStop: 3/30 | Time: 48.5s
+- Epoch [148/200] Train Loss: 0.3994 | Train MCC: 0.864 | Train AUC: 0.991 | Train Acc: 0.928 | Val Loss: 0.1667 | Val MCC: 0.714 | Val AUC: 0.913 | Val Acc: 0.824 | EarlyStop: 4/30 | Time: 48.4s
+- Epoch [149/200] Train Loss: 0.3986 | Train MCC: 0.868 | Train AUC: 0.992 | Train Acc: 0.930 | Val Loss: 0.1675 | Val MCC: 0.716 | Val AUC: 0.913 | Val Acc: 0.830 | EarlyStop: 5/30 | Time: 49.1s
++ New best MCC: 0.7159 (epoch 149)
+- Epoch [150/200] Train Loss: 0.3989 | Train MCC: 0.868 | Train AUC: 0.992 | Train Acc: 0.930 | Val Loss: 0.1646 | Val MCC: 0.713 | Val AUC: 0.914 | Val Acc: 0.829 | EarlyStop: 0/30 | Time: 48.6s
+- Epoch [151/200] Train Loss: 0.3981 | Train MCC: 0.868 | Train AUC: 0.992 | Train Acc: 0.930 | Val Loss: 0.1670 | Val MCC: 0.711 | Val AUC: 0.913 | Val Acc: 0.828 | EarlyStop: 1/30 | Time: 48.6s
+- Epoch [152/200] Train Loss: 0.3973 | Train MCC: 0.870 | Train AUC: 0.992 | Train Acc: 0.931 | Val Loss: 0.1685 | Val MCC: 0.718 | Val AUC: 0.914 | Val Acc: 0.839 | EarlyStop: 2/30 | Time: 48.3s
++ New best MCC: 0.7178 (epoch 152)
+- Epoch [153/200] Train Loss: 0.3981 | Train MCC: 0.869 | Train AUC: 0.992 | Train Acc: 0.931 | Val Loss: 0.1684 | Val MCC: 0.719 | Val AUC: 0.913 | Val Acc: 0.833 | EarlyStop: 0/30 | Time: 48.6s
++ New best MCC: 0.7187 (epoch 153)
+- Epoch [154/200] Train Loss: 0.3976 | Train MCC: 0.871 | Train AUC: 0.992 | Train Acc: 0.932 | Val Loss: 0.1679 | Val MCC: 0.716 | Val AUC: 0.914 | Val Acc: 0.842 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [155/200] Train Loss: 0.3966 | Train MCC: 0.874 | Train AUC: 0.992 | Train Acc: 0.934 | Val Loss: 0.1662 | Val MCC: 0.713 | Val AUC: 0.914 | Val Acc: 0.830 | EarlyStop: 1/30 | Time: 48.3s
+- Epoch [156/200] Train Loss: 0.3976 | Train MCC: 0.872 | Train AUC: 0.992 | Train Acc: 0.932 | Val Loss: 0.1672 | Val MCC: 0.713 | Val AUC: 0.914 | Val Acc: 0.832 | EarlyStop: 2/30 | Time: 48.5s
+- Epoch [157/200] Train Loss: 0.3959 | Train MCC: 0.875 | Train AUC: 0.993 | Train Acc: 0.934 | Val Loss: 0.1675 | Val MCC: 0.719 | Val AUC: 0.914 | Val Acc: 0.838 | EarlyStop: 3/30 | Time: 48.4s
++ New best MCC: 0.7194 (epoch 157)
+- Epoch [158/200] Train Loss: 0.3956 | Train MCC: 0.877 | Train AUC: 0.993 | Train Acc: 0.935 | Val Loss: 0.1693 | Val MCC: 0.716 | Val AUC: 0.913 | Val Acc: 0.832 | EarlyStop: 0/30 | Time: 48.5s
+- Epoch [159/200] Train Loss: 0.3966 | Train MCC: 0.875 | Train AUC: 0.993 | Train Acc: 0.934 | Val Loss: 0.1697 | Val MCC: 0.717 | Val AUC: 0.913 | Val Acc: 0.843 | EarlyStop: 1/30 | Time: 48.4s
+- Epoch [160/200] Train Loss: 0.3961 | Train MCC: 0.876 | Train AUC: 0.993 | Train Acc: 0.935 | Val Loss: 0.1688 | Val MCC: 0.719 | Val AUC: 0.914 | Val Acc: 0.834 | EarlyStop: 2/30 | Time: 48.3s
++ New best MCC: 0.7195 (epoch 160)
+- Epoch [161/200] Train Loss: 0.3968 | Train MCC: 0.876 | Train AUC: 0.992 | Train Acc: 0.935 | Val Loss: 0.1669 | Val MCC: 0.719 | Val AUC: 0.914 | Val Acc: 0.834 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [162/200] Train Loss: 0.3957 | Train MCC: 0.878 | Train AUC: 0.993 | Train Acc: 0.936 | Val Loss: 0.1694 | Val MCC: 0.721 | Val AUC: 0.914 | Val Acc: 0.845 | EarlyStop: 1/30 | Time: 48.6s
++ New best MCC: 0.7206 (epoch 162)
+- Epoch [163/200] Train Loss: 0.3957 | Train MCC: 0.877 | Train AUC: 0.993 | Train Acc: 0.935 | Val Loss: 0.1700 | Val MCC: 0.721 | Val AUC: 0.914 | Val Acc: 0.837 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [164/200] Train Loss: 0.3966 | Train MCC: 0.875 | Train AUC: 0.993 | Train Acc: 0.934 | Val Loss: 0.1690 | Val MCC: 0.718 | Val AUC: 0.914 | Val Acc: 0.839 | EarlyStop: 1/30 | Time: 48.5s
+- Epoch [165/200] Train Loss: 0.3960 | Train MCC: 0.877 | Train AUC: 0.993 | Train Acc: 0.935 | Val Loss: 0.1683 | Val MCC: 0.720 | Val AUC: 0.914 | Val Acc: 0.832 | EarlyStop: 2/30 | Time: 48.4s
+- Epoch [166/200] Train Loss: 0.3947 | Train MCC: 0.878 | Train AUC: 0.993 | Train Acc: 0.936 | Val Loss: 0.1714 | Val MCC: 0.722 | Val AUC: 0.914 | Val Acc: 0.846 | EarlyStop: 3/30 | Time: 48.6s
++ New best MCC: 0.7218 (epoch 166)
+- Epoch [167/200] Train Loss: 0.3946 | Train MCC: 0.881 | Train AUC: 0.993 | Train Acc: 0.938 | Val Loss: 0.1695 | Val MCC: 0.718 | Val AUC: 0.914 | Val Acc: 0.836 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [168/200] Train Loss: 0.3957 | Train MCC: 0.879 | Train AUC: 0.993 | Train Acc: 0.936 | Val Loss: 0.1698 | Val MCC: 0.722 | Val AUC: 0.915 | Val Acc: 0.847 | EarlyStop: 1/30 | Time: 48.3s
+- Epoch [169/200] Train Loss: 0.3954 | Train MCC: 0.879 | Train AUC: 0.993 | Train Acc: 0.936 | Val Loss: 0.1700 | Val MCC: 0.722 | Val AUC: 0.915 | Val Acc: 0.849 | EarlyStop: 2/30 | Time: 48.5s
+- Epoch [170/200] Train Loss: 0.3948 | Train MCC: 0.880 | Train AUC: 0.993 | Train Acc: 0.937 | Val Loss: 0.1684 | Val MCC: 0.720 | Val AUC: 0.915 | Val Acc: 0.833 | EarlyStop: 3/30 | Time: 48.4s
+- Epoch [171/200] Train Loss: 0.3945 | Train MCC: 0.881 | Train AUC: 0.993 | Train Acc: 0.938 | Val Loss: 0.1694 | Val MCC: 0.720 | Val AUC: 0.915 | Val Acc: 0.843 | EarlyStop: 4/30 | Time: 48.5s
+- Epoch [172/200] Train Loss: 0.3956 | Train MCC: 0.878 | Train AUC: 0.993 | Train Acc: 0.936 | Val Loss: 0.1687 | Val MCC: 0.717 | Val AUC: 0.915 | Val Acc: 0.840 | EarlyStop: 5/30 | Time: 48.3s
+- Epoch [173/200] Train Loss: 0.3946 | Train MCC: 0.881 | Train AUC: 0.993 | Train Acc: 0.937 | Val Loss: 0.1690 | Val MCC: 0.719 | Val AUC: 0.915 | Val Acc: 0.836 | EarlyStop: 6/30 | Time: 48.5s
+- Epoch [174/200] Train Loss: 0.3945 | Train MCC: 0.879 | Train AUC: 0.993 | Train Acc: 0.937 | Val Loss: 0.1702 | Val MCC: 0.721 | Val AUC: 0.915 | Val Acc: 0.841 | EarlyStop: 7/30 | Time: 48.4s
+- Epoch [175/200] Train Loss: 0.3952 | Train MCC: 0.880 | Train AUC: 0.993 | Train Acc: 0.937 | Val Loss: 0.1697 | Val MCC: 0.721 | Val AUC: 0.915 | Val Acc: 0.843 | EarlyStop: 8/30 | Time: 48.3s
+- Epoch [176/200] Train Loss: 0.3936 | Train MCC: 0.882 | Train AUC: 0.993 | Train Acc: 0.938 | Val Loss: 0.1713 | Val MCC: 0.721 | Val AUC: 0.915 | Val Acc: 0.850 | EarlyStop: 9/30 | Time: 48.3s
+- Epoch [177/200] Train Loss: 0.3930 | Train MCC: 0.885 | Train AUC: 0.994 | Train Acc: 0.940 | Val Loss: 0.1713 | Val MCC: 0.722 | Val AUC: 0.915 | Val Acc: 0.844 | EarlyStop: 10/30 | Time: 48.5s
+- Epoch [178/200] Train Loss: 0.3944 | Train MCC: 0.882 | Train AUC: 0.993 | Train Acc: 0.938 | Val Loss: 0.1711 | Val MCC: 0.722 | Val AUC: 0.915 | Val Acc: 0.846 | EarlyStop: 11/30 | Time: 48.5s
++ New best MCC: 0.7224 (epoch 178)
+- Epoch [179/200] Train Loss: 0.3933 | Train MCC: 0.884 | Train AUC: 0.993 | Train Acc: 0.939 | Val Loss: 0.1705 | Val MCC: 0.723 | Val AUC: 0.915 | Val Acc: 0.844 | EarlyStop: 0/30 | Time: 48.4s
++ New best MCC: 0.7228 (epoch 179)
+- Epoch [180/200] Train Loss: 0.3946 | Train MCC: 0.880 | Train AUC: 0.993 | Train Acc: 0.937 | Val Loss: 0.1702 | Val MCC: 0.723 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 0/30 | Time: 48.5s
++ New best MCC: 0.7231 (epoch 180)
+- Epoch [181/200] Train Loss: 0.3938 | Train MCC: 0.881 | Train AUC: 0.994 | Train Acc: 0.937 | Val Loss: 0.1702 | Val MCC: 0.724 | Val AUC: 0.915 | Val Acc: 0.846 | EarlyStop: 0/30 | Time: 48.3s
++ New best MCC: 0.7238 (epoch 181)
+- Epoch [182/200] Train Loss: 0.3943 | Train MCC: 0.884 | Train AUC: 0.993 | Train Acc: 0.939 | Val Loss: 0.1698 | Val MCC: 0.722 | Val AUC: 0.915 | Val Acc: 0.844 | EarlyStop: 0/30 | Time: 48.3s
+- Epoch [183/200] Train Loss: 0.3939 | Train MCC: 0.884 | Train AUC: 0.993 | Train Acc: 0.939 | Val Loss: 0.1694 | Val MCC: 0.722 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 1/30 | Time: 48.5s
+- Epoch [184/200] Train Loss: 0.3944 | Train MCC: 0.882 | Train AUC: 0.993 | Train Acc: 0.938 | Val Loss: 0.1694 | Val MCC: 0.722 | Val AUC: 0.915 | Val Acc: 0.846 | EarlyStop: 2/30 | Time: 48.3s
+- Epoch [185/200] Train Loss: 0.3948 | Train MCC: 0.881 | Train AUC: 0.993 | Train Acc: 0.937 | Val Loss: 0.1692 | Val MCC: 0.722 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 3/30 | Time: 48.4s
+- Epoch [186/200] Train Loss: 0.3942 | Train MCC: 0.882 | Train AUC: 0.993 | Train Acc: 0.938 | Val Loss: 0.1692 | Val MCC: 0.723 | Val AUC: 0.915 | Val Acc: 0.844 | EarlyStop: 4/30 | Time: 48.5s
+- Epoch [187/200] Train Loss: 0.3935 | Train MCC: 0.882 | Train AUC: 0.993 | Train Acc: 0.938 | Val Loss: 0.1694 | Val MCC: 0.723 | Val AUC: 0.916 | Val Acc: 0.845 | EarlyStop: 5/30 | Time: 48.4s
+- Epoch [188/200] Train Loss: 0.3940 | Train MCC: 0.881 | Train AUC: 0.994 | Train Acc: 0.938 | Val Loss: 0.1697 | Val MCC: 0.723 | Val AUC: 0.915 | Val Acc: 0.846 | EarlyStop: 6/30 | Time: 48.6s
+- Epoch [189/200] Train Loss: 0.3939 | Train MCC: 0.884 | Train AUC: 0.993 | Train Acc: 0.939 | Val Loss: 0.1699 | Val MCC: 0.724 | Val AUC: 0.915 | Val Acc: 0.846 | EarlyStop: 7/30 | Time: 48.7s
++ New best MCC: 0.7244 (epoch 189)
+- Epoch [190/200] Train Loss: 0.3930 | Train MCC: 0.883 | Train AUC: 0.994 | Train Acc: 0.939 | Val Loss: 0.1704 | Val MCC: 0.724 | Val AUC: 0.915 | Val Acc: 0.847 | EarlyStop: 0/30 | Time: 48.5s
+- Epoch [191/200] Train Loss: 0.3946 | Train MCC: 0.884 | Train AUC: 0.993 | Train Acc: 0.939 | Val Loss: 0.1698 | Val MCC: 0.725 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 1/30 | Time: 48.4s
++ New best MCC: 0.7245 (epoch 191)
+- Epoch [192/200] Train Loss: 0.3932 | Train MCC: 0.884 | Train AUC: 0.994 | Train Acc: 0.939 | Val Loss: 0.1698 | Val MCC: 0.724 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [193/200] Train Loss: 0.3931 | Train MCC: 0.885 | Train AUC: 0.993 | Train Acc: 0.940 | Val Loss: 0.1698 | Val MCC: 0.725 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 1/30 | Time: 48.5s
++ New best MCC: 0.7248 (epoch 193)
+- Epoch [194/200] Train Loss: 0.3937 | Train MCC: 0.884 | Train AUC: 0.994 | Train Acc: 0.939 | Val Loss: 0.1699 | Val MCC: 0.725 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 0/30 | Time: 48.3s
+- Epoch [195/200] Train Loss: 0.3960 | Train MCC: 0.878 | Train AUC: 0.993 | Train Acc: 0.936 | Val Loss: 0.1697 | Val MCC: 0.724 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 1/30 | Time: 48.3s
+- Epoch [196/200] Train Loss: 0.3937 | Train MCC: 0.883 | Train AUC: 0.994 | Train Acc: 0.939 | Val Loss: 0.1698 | Val MCC: 0.726 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 2/30 | Time: 48.4s
++ New best MCC: 0.7257 (epoch 196)
+- Epoch [197/200] Train Loss: 0.3933 | Train MCC: 0.883 | Train AUC: 0.993 | Train Acc: 0.939 | Val Loss: 0.1699 | Val MCC: 0.725 | Val AUC: 0.915 | Val Acc: 0.846 | EarlyStop: 0/30 | Time: 48.4s
+- Epoch [198/200] Train Loss: 0.3949 | Train MCC: 0.882 | Train AUC: 0.993 | Train Acc: 0.938 | Val Loss: 0.1697 | Val MCC: 0.725 | Val AUC: 0.915 | Val Acc: 0.846 | EarlyStop: 1/30 | Time: 48.5s
+- Epoch [199/200] Train Loss: 0.3942 | Train MCC: 0.883 | Train AUC: 0.993 | Train Acc: 0.939 | Val Loss: 0.1696 | Val MCC: 0.725 | Val AUC: 0.915 | Val Acc: 0.845 | EarlyStop: 2/30 | Time: 48.4s
+- Epoch [200/200] Train Loss: 0.3948 | Train MCC: 0.884 | Train AUC: 0.993 | Train Acc: 0.939 | Val Loss: 0.1695 | Val MCC: 0.725 | Val AUC: 0.915 | Val Acc: 0.844 | EarlyStop: 3/30 | Time: 48.3s
+
+########## Training completed for 200 epochs.
+=================================================
+Best validation MCC: 0.7257 achieved at epoch 196
+=================================================
+Best threshold (from best model epoch 196): 0.88, MCC: 0.7257
+
+Best validation MCC : 0.7257 (epoch 196)
+Optimal threshold   : 0.88
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/arabidopsis_genes.fasta (k=4)...
+########## 690 graphs built!
+########## Testing on 690 samples...
+Threshold search: best threshold=0.89, flipped=True (input was 0.88)
+########## Testing completed. Outputs are saved in results!
+
+============================================================
+Cross-species test (v5): trained on all except arabidopsis
+ #Sample  TN  FP  FN  TP  Sensitivity  Specificity  Precision  Recall  Accuracy    AUC    MCC  Threshold
+     690 121  17 445 107       0.1938       0.8768     0.8629  0.1938    0.3304 0.5198 0.0736       0.89
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/saccharomyces_genes.fasta (k=4)...
+########## 4622 graphs built!
+########## Testing on 4622 samples...
+Threshold search: best threshold=0.59, flipped=False (input was 0.88)
+########## Testing completed. Outputs are saved in results!
+
+============================================================
+Cross-species test (v5): trained on all except saccharomyces
+ #Sample   TN  FP  FN  TP  Sensitivity  Specificity  Precision  Recall  Accuracy    AUC    MCC  Threshold
+    4622 3239 448 765 170       0.1818       0.8785     0.2751  0.1818    0.7376 0.5512 0.0712       0.59
+
+============================================================
+Within-species sanity check (v5): elegans → elegans
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/elegans_genes.fasta (k=4)...
+########## 16741 graphs built!
+########## Testing on 16741 samples...
+Threshold search: best threshold=0.94, flipped=False (input was 0.88)
+########## Testing completed. Outputs are saved in results!
+ #Sample    TN  FP  FN  TP  Sensitivity  Specificity  Precision  Recall  Accuracy    AUC  MCC  Threshold
+   16741 16041  30 129 541       0.8075       0.9981     0.9475  0.8075    0.9905 0.9634 0.87       0.94
