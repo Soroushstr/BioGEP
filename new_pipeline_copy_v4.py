@@ -68,6 +68,7 @@ from sklearn.metrics import confusion_matrix, precision_score, recall_score
 from collections import Counter
 import matplotlib.pyplot as plt
 from sklearn.metrics import matthews_corrcoef
+from new_gnn_models import SupConLoss
 
 
 # ---------------------------------------------------------------------------
@@ -200,6 +201,10 @@ def train(
         focal_loss_gamma=0.0,
         # Effective training class-prior (returned in results for use in test())
         train_prior=0.5,     # 0.5 = balanced sampling; set to actual fraction otherwise
+        # Supervised contrastive loss (Khosla et al. 2020)
+        # Disabled by default (lambda_con=0) for backward compatibility.
+        lambda_con=0.0,      # weight of the SupCon loss term; 0 = disabled
+        con_temperature=0.1, # softmax temperature for SupCon (lower = sharper)
 ):
     random.seed(random_seed)
     torch.manual_seed(random_seed)
@@ -272,6 +277,8 @@ def train(
     print(f"\n########## Training for {epoch_n} epochs on {device}...")
 
     use_adv = (num_species > 0 and hasattr(model, 'forward_adv'))
+    use_con = (lambda_con > 0 and hasattr(model, 'forward_all'))
+    supcon_fn = SupConLoss(temperature=con_temperature) if use_con else None
 
     for epoch in range(1, epoch_n + 1):
         t0 = time.time()
@@ -286,11 +293,16 @@ def train(
             batch = batch.to(device)
             optimizer.zero_grad()
 
-            if use_adv and hasattr(batch, 'species_id'):
-                out, species_out = model.forward_adv(batch, alpha=grl_alpha)
-                class_loss   = criterion(out, batch.y)
-                species_loss = F.cross_entropy(species_out, batch.species_id.view(-1))
-                loss         = class_loss + lambda_adv * species_loss
+            if use_adv or use_con:
+                out, species_out, proj_emb = model.forward_all(batch, alpha=grl_alpha)
+                class_loss = criterion(out, batch.y)
+                loss = class_loss
+                if use_adv and species_out is not None and hasattr(batch, 'species_id'):
+                    species_loss = F.cross_entropy(species_out, batch.species_id.view(-1))
+                    loss = loss + lambda_adv * species_loss
+                if use_con and proj_emb is not None:
+                    con_loss = supcon_fn(proj_emb, batch.y.view(-1))
+                    loss = loss + lambda_con * con_loss
             else:
                 out  = model(batch)
                 loss = criterion(out, batch.y)

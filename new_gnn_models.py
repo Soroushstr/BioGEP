@@ -8,6 +8,72 @@ from torch_geometric.utils import add_self_loops, softmax
 
 
 # ---------------------------------------------------------------------------
+# Supervised Contrastive Loss (Khosla et al., 2020)
+# ---------------------------------------------------------------------------
+
+class SupConLoss(nn.Module):
+    """
+    Supervised Contrastive Loss.
+
+    For each anchor i in the batch, treats all samples j with the same label
+    as positives and all samples k with a different label as negatives.
+    Forces the backbone to learn class-discriminative representations that
+    cluster essential (or non-essential) genes together regardless of species.
+
+    L = -(1/N) * sum_i { (1/|P(i)|) * sum_{j in P(i)}
+            log[ exp(sim(z_i, z_j) / τ) / sum_{k≠i} exp(sim(z_i, z_k) / τ) ] }
+
+    Args:
+        temperature: softmax temperature τ (default 0.1, lower = sharper contrast)
+    """
+    def __init__(self, temperature: float = 0.1):
+        super().__init__()
+        self.temperature = temperature
+
+    def forward(self, features: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Args:
+            features : [N, D] L2-normalised embeddings (use F.normalize before calling)
+            labels   : [N]    integer class labels (0 or 1)
+        Returns:
+            scalar loss (0.0 if no valid anchor exists)
+        """
+        device = features.device
+        N = features.shape[0]
+        if N < 2:
+            return torch.tensor(0.0, device=device, requires_grad=True)
+
+        # Pairwise cosine similarities (features are already L2-normalised)
+        sim = torch.mm(features, features.T) / self.temperature   # [N, N]
+
+        # Positive mask: same label, different sample
+        labels = labels.view(-1, 1)
+        pos_mask = (labels == labels.T).float()
+        pos_mask.fill_diagonal_(0.0)
+
+        # Numerical stability: subtract row max before exp
+        sim_max = sim.detach().max(dim=1, keepdim=True).values
+        exp_sim = torch.exp(sim - sim_max)
+
+        # Denominator: all pairs except self
+        self_mask = torch.eye(N, dtype=torch.bool, device=device)
+        denom = exp_sim.masked_fill(self_mask, 0.0).sum(dim=1, keepdim=True).clamp(min=1e-8)
+
+        # Log-probability for each pair
+        log_prob = (sim - sim_max) - torch.log(denom)   # [N, N]
+
+        # Per-anchor loss: mean over positives
+        n_pos  = pos_mask.sum(dim=1)          # [N]
+        valid  = n_pos > 0
+        if not valid.any():
+            return torch.tensor(0.0, device=device, requires_grad=True)
+
+        loss = -(pos_mask * log_prob).sum(dim=1)   # [N]
+        loss = loss[valid] / n_pos[valid]
+        return loss.mean()
+
+
+# ---------------------------------------------------------------------------
 # Gradient Reversal Layer — core of domain-adversarial training
 # ---------------------------------------------------------------------------
 
@@ -56,6 +122,7 @@ class CrossSpeciesGNN(nn.Module):
         dropout: float = 0.3,
         pool: str = "mean+max",
         num_species: int = 0,   # 0 = no adversarial head; >0 = number of training species
+        proj_dim: int = 0,      # 0 = no contrastive head; >0 = contrastive projection dim
     ):
         super().__init__()
         self.dropout   = dropout
@@ -119,6 +186,17 @@ class CrossSpeciesGNN(nn.Module):
                 nn.Linear(hidden_dim // 2, num_species),
             )
 
+        # Contrastive projection head (only when proj_dim > 0)
+        # Projects backbone embedding to a lower-dim space for SupCon loss.
+        # A separate head keeps the classification head unaffected.
+        self.proj_head = None
+        if proj_dim > 0:
+            self.proj_head = nn.Sequential(
+                nn.Linear(embed_dim, hidden_dim),
+                nn.ReLU(),
+                nn.Linear(hidden_dim, proj_dim),
+            )
+
     def _embed(self, data):
         x = self.input_proj(data.x)
 
@@ -158,6 +236,26 @@ class CrossSpeciesGNN(nn.Module):
         """Return (class_logits, species_logits) for adversarial training."""
         g = self._embed(data)
         return self.classifier(g), self.species_disc(grad_reverse(g, alpha))
+
+    def forward_all(self, data, alpha: float = 1.0):
+        """Return (class_logits, species_logits_or_None, proj_emb_or_None).
+
+        Used when combining adversarial + contrastive losses in a single pass.
+        species_logits is None when no species discriminator is present.
+        proj_emb is L2-normalised and None when no projection head is present.
+        """
+        g = self._embed(data)
+        logits = self.classifier(g)
+
+        species_logits = None
+        if self.num_species > 0 and hasattr(self, 'species_disc'):
+            species_logits = self.species_disc(grad_reverse(g, alpha))
+
+        proj_emb = None
+        if self.proj_head is not None:
+            proj_emb = F.normalize(self.proj_head(g), dim=-1)
+
+        return logits, species_logits, proj_emb
 
 
 class WeightedGCN_BioFeatures(nn.Module):

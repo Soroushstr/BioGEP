@@ -1,0 +1,115 @@
+============================================================
+LOO fold         : hold out 'maripaludis'
+Val strategy     : LOO-val — 20% of held-out species (stratified)
+Test set         : remaining 80% of held-out species
+k-mer size       : 4
+Setting          : v9 (lv20) — GRL + Focal + Bayesian prior correction
+  lambda_adv     : 0.2
+  dropout        : 0.3
+  epochs         : 200, patience=30
+Device           : cuda
+============================================================
+
+########## Building held-out species graphs: maripaludis
+  Total genes      : 1590
+  Essential genes  : 518 (0.326)
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/maripaludis_genes.fasta (k=4)...
+########## 1590 graphs built!
+  Val  set (20%)   : 317 genes, 103 essential (0.325)
+  Test set (80%)   : 1273 genes, 415 essential (0.326)
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/elegans_genes.fasta (k=4)...
+########## 16741 graphs built!
+  elegans (id=0): 16741 graphs, 670 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/melanogaster_genes.fasta (k=4)...
+########## 7298 graphs built!
+  melanogaster (id=1): 7298 graphs, 414 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/musculus_genes.fasta (k=4)...
+########## 49132 graphs built!
+  musculus (id=2): 49132 graphs, 11247 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/bacillus_genes.fasta (k=4)...
+########## 4173 graphs built!
+  bacillus (id=3): 4173 graphs, 362 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/sapiens_genes.fasta (k=4)...
+########## 12015 graphs built!
+  sapiens (id=4): 12015 graphs, 1516 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/arabidopsis_genes.fasta (k=4)...
+########## 690 graphs built!
+  arabidopsis (id=5): 690 graphs, 552 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/saccharomyces_genes.fasta (k=4)...
+########## 4622 graphs built!
+  saccharomyces (id=6): 4622 graphs, 935 essentials → TRAIN
+
+Total training graphs : 94671
+Training species      : 7 ['elegans', 'melanogaster', 'musculus', 'bacillus', 'sapiens', 'arabidopsis', 'saccharomyces']
+Actual data prior     : 0.166
+Effective train prior : 0.500  (balanced sampling)
+
+*** VAL SET: 317 genes from 'maripaludis' (lv20) ***
+*** Early stopping signal is now aligned with the test distribution ***
+
+
+Using external val_graphs for validation: 317 samples (cross-species proxy)
+
+94671 graphs split: Train=94671, Val=317
+Effective training prior (π_train): 0.500
+Using Focal Loss (gamma=2.0)
+
+########## Training for 200 epochs on cuda...
+- Epoch [001/200] Train Loss: 0.6436 | Train MCC: 0.000 | Train AUC: 0.663 | Train Acc: 0.498 | Val Loss: 0.2617 | Val MCC: 0.239 | Val AUC: 0.622 | Val Acc: 0.325 | EarlyStop: 0/30 | Time: 54.5s
++ New best MCC: 0.2393 (epoch 1)
+- Epoch [002/200] Train Loss: 0.6161 | Train MCC: 0.000 | Train AUC: 0.742 | Train Acc: 0.501 | Val Loss: 0.2737 | Val MCC: 0.228 | Val AUC: 0.603 | Val Acc: 0.325 | EarlyStop: 0/30 | Time: 53.8s
+- Epoch [003/200] Train Loss: 0.6033 | Train MCC: 0.116 | Train AUC: 0.773 | Train Acc: 0.513 | Val Loss: 0.2811 | Val MCC: 0.144 | Val AUC: 0.574 | Val Acc: 0.350 | EarlyStop: 1/30 | Time: 53.7s
+- Epoch [004/200] Train Loss: 0.5919 | Train MCC: 0.216 | Train AUC: 0.789 | Train Acc: 0.549 | Val Loss: 0.2753 | Val MCC: 0.115 | Val AUC: 0.565 | Val Acc: 0.341 | EarlyStop: 2/30 | Time: 53.6s
+- Epoch [005/200] Train Loss: 0.5796 | Train MCC: 0.283 | Train AUC: 0.809 | Train Acc: 0.575 | Val Loss: 0.3105 | Val MCC: 0.138 | Val AUC: 0.563 | Val Acc: 0.350 | EarlyStop: 3/30 | Time: 53.7s
+- Epoch [006/200] Train Loss: 0.5714 | Train MCC: 0.327 | Train AUC: 0.824 | Train Acc: 0.600 | Val Loss: 0.3277 | Val MCC: 0.126 | Val AUC: 0.561 | Val Acc: 0.382 | EarlyStop: 4/30 | Time: 53.8s
+- Epoch [007/200] Train Loss: 0.5628 | Train MCC: 0.366 | Train AUC: 0.838 | Train Acc: 0.622 | Val Loss: 0.3385 | Val MCC: 0.147 | Val AUC: 0.562 | Val Acc: 0.407 | EarlyStop: 5/30 | Time: 53.9s
+- Epoch [008/200] Train Loss: 0.5531 | Train MCC: 0.405 | Train AUC: 0.852 | Train Acc: 0.646 | Val Loss: 0.3696 | Val MCC: 0.176 | Val AUC: 0.587 | Val Acc: 0.438 | EarlyStop: 6/30 | Time: 53.9s
+- Epoch [009/200] Train Loss: 0.5458 | Train MCC: 0.433 | Train AUC: 0.864 | Train Acc: 0.662 | Val Loss: 0.3438 | Val MCC: 0.141 | Val AUC: 0.580 | Val Acc: 0.401 | EarlyStop: 7/30 | Time: 54.1s
+- Epoch [010/200] Train Loss: 0.5392 | Train MCC: 0.460 | Train AUC: 0.871 | Train Acc: 0.679 | Val Loss: 0.4021 | Val MCC: 0.138 | Val AUC: 0.574 | Val Acc: 0.451 | EarlyStop: 8/30 | Time: 54.0s
+- Epoch [011/200] Train Loss: 0.5340 | Train MCC: 0.466 | Train AUC: 0.879 | Train Acc: 0.681 | Val Loss: 0.3717 | Val MCC: 0.166 | Val AUC: 0.569 | Val Acc: 0.451 | EarlyStop: 9/30 | Time: 54.2s
+- Epoch [012/200] Train Loss: 0.5288 | Train MCC: 0.490 | Train AUC: 0.886 | Train Acc: 0.697 | Val Loss: 0.4442 | Val MCC: 0.138 | Val AUC: 0.567 | Val Acc: 0.508 | EarlyStop: 10/30 | Time: 54.2s
+- Epoch [013/200] Train Loss: 0.5241 | Train MCC: 0.508 | Train AUC: 0.893 | Train Acc: 0.709 | Val Loss: 0.4292 | Val MCC: 0.127 | Val AUC: 0.562 | Val Acc: 0.467 | EarlyStop: 11/30 | Time: 54.3s
+- Epoch [014/200] Train Loss: 0.5214 | Train MCC: 0.517 | Train AUC: 0.899 | Train Acc: 0.715 | Val Loss: 0.4215 | Val MCC: 0.167 | Val AUC: 0.580 | Val Acc: 0.489 | EarlyStop: 12/30 | Time: 54.4s
+- Epoch [015/200] Train Loss: 0.5187 | Train MCC: 0.525 | Train AUC: 0.905 | Train Acc: 0.720 | Val Loss: 0.4724 | Val MCC: 0.134 | Val AUC: 0.567 | Val Acc: 0.498 | EarlyStop: 13/30 | Time: 54.4s
+- Epoch [016/200] Train Loss: 0.5160 | Train MCC: 0.541 | Train AUC: 0.908 | Train Acc: 0.730 | Val Loss: 0.4923 | Val MCC: 0.201 | Val AUC: 0.587 | Val Acc: 0.558 | EarlyStop: 14/30 | Time: 54.4s
+- Epoch [017/200] Train Loss: 0.5141 | Train MCC: 0.552 | Train AUC: 0.912 | Train Acc: 0.736 | Val Loss: 0.4978 | Val MCC: 0.196 | Val AUC: 0.590 | Val Acc: 0.580 | EarlyStop: 15/30 | Time: 54.4s
+- Epoch [018/200] Train Loss: 0.5122 | Train MCC: 0.560 | Train AUC: 0.915 | Train Acc: 0.742 | Val Loss: 0.4780 | Val MCC: 0.203 | Val AUC: 0.594 | Val Acc: 0.546 | EarlyStop: 16/30 | Time: 54.6s
+- Epoch [019/200] Train Loss: 0.5100 | Train MCC: 0.570 | Train AUC: 0.917 | Train Acc: 0.749 | Val Loss: 0.5054 | Val MCC: 0.156 | Val AUC: 0.588 | Val Acc: 0.562 | EarlyStop: 17/30 | Time: 54.4s
+- Epoch [020/200] Train Loss: 0.5070 | Train MCC: 0.578 | Train AUC: 0.921 | Train Acc: 0.754 | Val Loss: 0.4990 | Val MCC: 0.169 | Val AUC: 0.590 | Val Acc: 0.565 | EarlyStop: 18/30 | Time: 54.4s
+- Epoch [021/200] Train Loss: 0.5052 | Train MCC: 0.587 | Train AUC: 0.924 | Train Acc: 0.760 | Val Loss: 0.5752 | Val MCC: 0.128 | Val AUC: 0.560 | Val Acc: 0.546 | EarlyStop: 19/30 | Time: 54.3s
+- Epoch [022/200] Train Loss: 0.5036 | Train MCC: 0.598 | Train AUC: 0.927 | Train Acc: 0.767 | Val Loss: 0.5323 | Val MCC: 0.143 | Val AUC: 0.569 | Val Acc: 0.555 | EarlyStop: 20/30 | Time: 54.4s
+- Epoch [023/200] Train Loss: 0.5011 | Train MCC: 0.604 | Train AUC: 0.931 | Train Acc: 0.770 | Val Loss: 0.5350 | Val MCC: 0.160 | Val AUC: 0.559 | Val Acc: 0.574 | EarlyStop: 21/30 | Time: 54.4s
+- Epoch [024/200] Train Loss: 0.5003 | Train MCC: 0.604 | Train AUC: 0.931 | Train Acc: 0.771 | Val Loss: 0.5479 | Val MCC: 0.179 | Val AUC: 0.578 | Val Acc: 0.552 | EarlyStop: 22/30 | Time: 54.4s
+- Epoch [025/200] Train Loss: 0.4987 | Train MCC: 0.610 | Train AUC: 0.933 | Train Acc: 0.774 | Val Loss: 0.5930 | Val MCC: 0.152 | Val AUC: 0.574 | Val Acc: 0.590 | EarlyStop: 23/30 | Time: 54.8s
+- Epoch [026/200] Train Loss: 0.4977 | Train MCC: 0.618 | Train AUC: 0.935 | Train Acc: 0.780 | Val Loss: 0.5568 | Val MCC: 0.136 | Val AUC: 0.572 | Val Acc: 0.577 | EarlyStop: 24/30 | Time: 54.6s
+- Epoch [027/200] Train Loss: 0.4966 | Train MCC: 0.621 | Train AUC: 0.937 | Train Acc: 0.782 | Val Loss: 0.5729 | Val MCC: 0.121 | Val AUC: 0.560 | Val Acc: 0.571 | EarlyStop: 25/30 | Time: 54.5s
+- Epoch [028/200] Train Loss: 0.4958 | Train MCC: 0.626 | Train AUC: 0.938 | Train Acc: 0.785 | Val Loss: 0.5535 | Val MCC: 0.186 | Val AUC: 0.583 | Val Acc: 0.584 | EarlyStop: 26/30 | Time: 54.4s
+- Epoch [029/200] Train Loss: 0.4928 | Train MCC: 0.638 | Train AUC: 0.940 | Train Acc: 0.792 | Val Loss: 0.6334 | Val MCC: 0.161 | Val AUC: 0.575 | Val Acc: 0.596 | EarlyStop: 27/30 | Time: 54.5s
+- Epoch [030/200] Train Loss: 0.4922 | Train MCC: 0.639 | Train AUC: 0.942 | Train Acc: 0.793 | Val Loss: 0.5814 | Val MCC: 0.157 | Val AUC: 0.566 | Val Acc: 0.574 | EarlyStop: 28/30 | Time: 54.6s
+- Epoch [031/200] Train Loss: 0.4911 | Train MCC: 0.640 | Train AUC: 0.944 | Train Acc: 0.794 | Val Loss: 0.6566 | Val MCC: 0.158 | Val AUC: 0.554 | Val Acc: 0.609 | EarlyStop: 29/30 | Time: 54.5s
+XXXXXXXXXX Early stopping triggered at epoch 31!
+=================================================
+Best validation MCC: 0.2393 achieved at epoch 1
+=================================================
+Best threshold (from best model epoch 1): 0.75, MCC: 0.2393
+
+Best Val MCC  : 0.2393 (epoch 1)
+Threshold     : 0.75
+(Val set was 317 genes from held-out 'maripaludis')
+
+============================================================
+Testing on held-out test set: maripaludis
+  n_test=1273, n_essential=415, π_test=0.326
+########## Testing on 1273 samples...
+Bayesian prior correction: π_train=0.500 → π_test=0.326  (log-odds shift = -0.726 nats)
+  Prob stats before: mean=0.707  median=0.705  frac>0.5=1.000
+  Prob stats after : mean=0.543  median=0.537  frac>0.5=0.662
+Threshold search: best threshold=0.59, flipped=False (input was 0.75)
+########## Testing completed. Outputs are saved in results!
+
+LOO test (lv20) — trained on all except 'maripaludis':
+ #Sample  TN  FP  FN  TP  Sensitivity  Specificity  Precision  Recall  Accuracy    AUC    MCC  Threshold  pi_test
+    1273 704 154 243 172       0.4145       0.8205     0.5276  0.4145    0.6881 0.6604 0.2523       0.59    0.326
+
+Results saved → /gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/resultsMCC/loo_v9_lv20_maripaludis_results.csv
+LOO fold 'maripaludis' (lv20) complete.
