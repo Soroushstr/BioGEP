@@ -1,0 +1,2 @@
+held_out_species,train_species,n_train_species,version,lambda_adv,val_frac,n_val,best_val_auc,best_val_mcc,best_epoch,n_test,MCC,AUC,Sensitivity,Specificity,Precision,Recall,Accuracy,pi_test,Threshold,TN,FP,FN,TP
+melanogaster,elegans|musculus|maripaludis|bacillus|sapiens|arabidopsis|saccharomyces,7,v10_a10,1.0,0.2,1458,0.6641,0.1556,5,5840.0,0.1554,0.6884,0.3614,0.8722,0.1456,0.3614,0.8432,0.0568,0.21,4804.0,704.0,212.0,120.0

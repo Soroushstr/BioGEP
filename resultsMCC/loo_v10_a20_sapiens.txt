@@ -1,0 +1,101 @@
+============================================================
+LOO fold         : hold out 'sapiens'
+Version          : v10_a20
+GRL alpha        : 1.0 (constant — no schedule)
+lambda_adv       : 2.0
+Early stop on    : AUC (threshold-free)
+Val set          : 20% of held-out species (stratified)
+patience         : 20
+Device           : cuda
+============================================================
+
+########## Building held-out species graphs: sapiens
+  Total genes     : 12015
+  Essential genes : 1516 (0.126)
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/sapiens_genes.fasta (k=4)...
+########## 12015 graphs built!
+  Val  set (20%)  : 2402 genes, 303 essential
+  Test set (80%)  : 9613 genes, 1213 essential
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/elegans_genes.fasta (k=4)...
+########## 16741 graphs built!
+  elegans (id=0): 16741 graphs, 670 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/melanogaster_genes.fasta (k=4)...
+########## 7298 graphs built!
+  melanogaster (id=1): 7298 graphs, 414 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/musculus_genes.fasta (k=4)...
+########## 49132 graphs built!
+  musculus (id=2): 49132 graphs, 11247 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/maripaludis_genes.fasta (k=4)...
+########## 1590 graphs built!
+  maripaludis (id=3): 1590 graphs, 518 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/bacillus_genes.fasta (k=4)...
+########## 4173 graphs built!
+  bacillus (id=4): 4173 graphs, 362 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/arabidopsis_genes.fasta (k=4)...
+########## 690 graphs built!
+  arabidopsis (id=5): 690 graphs, 552 essentials → TRAIN
+########## Building bio-feature graphs from /gpfs/data/fs72129/imansamiei/soroush/GEPNew/data/saccharomyces_genes.fasta (k=4)...
+########## 4622 graphs built!
+  saccharomyces (id=6): 4622 graphs, 935 essentials → TRAIN
+
+Total training graphs : 84246
+Training species      : 7 ['elegans', 'melanogaster', 'musculus', 'maripaludis', 'bacillus', 'arabidopsis', 'saccharomyces']
+
+Using external val_graphs for validation: 2402 samples
+
+84246 graphs split: Train=84246, Val=2402
+Effective training prior (π_train): 0.500
+Early stopping metric: AUC  (v10: constant GRL alpha=1.0)
+Using Focal Loss (gamma=2.0)
+
+########## Training for 200 epochs on cuda...
+GRL: constant alpha=1.0, lambda_adv=2.0  (effective weight = 2.00 every epoch — no warmup)
+- Epoch [001/200] Train Loss: 4.1826 | Train MCC: 0.008 | Train AUC: 0.617 | Train Acc: 0.498 | Val Loss: 0.1997 | Val MCC: 0.241 | Val AUC: 0.721 | Val Acc: 0.126 | EarlyStop: 0/20 | Time: 49.0s
++ New best AUC: 0.7211 (epoch 1)  [MCC=0.2415  AUC=0.7211]
+- Epoch [002/200] Train Loss: 4.1276 | Train MCC: 0.000 | Train AUC: 0.711 | Train Acc: 0.503 | Val Loss: 0.2086 | Val MCC: 0.232 | Val AUC: 0.711 | Val Acc: 0.126 | EarlyStop: 0/20 | Time: 47.9s
+- Epoch [003/200] Train Loss: 4.1155 | Train MCC: 0.000 | Train AUC: 0.755 | Train Acc: 0.501 | Val Loss: 0.2371 | Val MCC: 0.213 | Val AUC: 0.689 | Val Acc: 0.126 | EarlyStop: 1/20 | Time: 47.8s
+- Epoch [004/200] Train Loss: 4.1063 | Train MCC: 0.091 | Train AUC: 0.779 | Train Acc: 0.509 | Val Loss: 0.2368 | Val MCC: 0.226 | Val AUC: 0.680 | Val Acc: 0.126 | EarlyStop: 2/20 | Time: 47.9s
+- Epoch [005/200] Train Loss: 4.1008 | Train MCC: 0.156 | Train AUC: 0.795 | Train Acc: 0.525 | Val Loss: 0.2581 | Val MCC: 0.226 | Val AUC: 0.692 | Val Acc: 0.152 | EarlyStop: 3/20 | Time: 47.8s
+- Epoch [006/200] Train Loss: 4.0912 | Train MCC: 0.218 | Train AUC: 0.812 | Train Acc: 0.548 | Val Loss: 0.2349 | Val MCC: 0.231 | Val AUC: 0.695 | Val Acc: 0.179 | EarlyStop: 4/20 | Time: 47.8s
+- Epoch [007/200] Train Loss: 4.0843 | Train MCC: 0.261 | Train AUC: 0.823 | Train Acc: 0.566 | Val Loss: 0.2290 | Val MCC: 0.237 | Val AUC: 0.708 | Val Acc: 0.247 | EarlyStop: 5/20 | Time: 47.8s
+- Epoch [008/200] Train Loss: 4.0777 | Train MCC: 0.306 | Train AUC: 0.837 | Train Acc: 0.590 | Val Loss: 0.2998 | Val MCC: 0.197 | Val AUC: 0.674 | Val Acc: 0.185 | EarlyStop: 6/20 | Time: 47.8s
+- Epoch [009/200] Train Loss: 4.0693 | Train MCC: 0.370 | Train AUC: 0.850 | Train Acc: 0.626 | Val Loss: 0.2642 | Val MCC: 0.192 | Val AUC: 0.675 | Val Acc: 0.253 | EarlyStop: 7/20 | Time: 47.9s
+- Epoch [010/200] Train Loss: 4.0602 | Train MCC: 0.413 | Train AUC: 0.861 | Train Acc: 0.650 | Val Loss: 0.2155 | Val MCC: 0.236 | Val AUC: 0.702 | Val Acc: 0.377 | EarlyStop: 8/20 | Time: 47.8s
+- Epoch [011/200] Train Loss: 4.0577 | Train MCC: 0.406 | Train AUC: 0.865 | Train Acc: 0.648 | Val Loss: 0.2346 | Val MCC: 0.230 | Val AUC: 0.693 | Val Acc: 0.326 | EarlyStop: 9/20 | Time: 47.9s
+- Epoch [012/200] Train Loss: 4.0514 | Train MCC: 0.448 | Train AUC: 0.875 | Train Acc: 0.672 | Val Loss: 0.2138 | Val MCC: 0.236 | Val AUC: 0.709 | Val Acc: 0.443 | EarlyStop: 10/20 | Time: 48.3s
+- Epoch [013/200] Train Loss: 4.0482 | Train MCC: 0.456 | Train AUC: 0.881 | Train Acc: 0.677 | Val Loss: 0.2237 | Val MCC: 0.221 | Val AUC: 0.687 | Val Acc: 0.406 | EarlyStop: 11/20 | Time: 47.9s
+- Epoch [014/200] Train Loss: 4.0457 | Train MCC: 0.468 | Train AUC: 0.886 | Train Acc: 0.686 | Val Loss: 0.2429 | Val MCC: 0.239 | Val AUC: 0.701 | Val Acc: 0.347 | EarlyStop: 12/20 | Time: 47.9s
+- Epoch [015/200] Train Loss: 4.0409 | Train MCC: 0.482 | Train AUC: 0.892 | Train Acc: 0.694 | Val Loss: 0.2422 | Val MCC: 0.213 | Val AUC: 0.689 | Val Acc: 0.432 | EarlyStop: 13/20 | Time: 48.0s
+- Epoch [016/200] Train Loss: 4.0376 | Train MCC: 0.494 | Train AUC: 0.897 | Train Acc: 0.703 | Val Loss: 0.2249 | Val MCC: 0.237 | Val AUC: 0.711 | Val Acc: 0.454 | EarlyStop: 14/20 | Time: 48.0s
+- Epoch [017/200] Train Loss: 4.0351 | Train MCC: 0.515 | Train AUC: 0.902 | Train Acc: 0.715 | Val Loss: 0.2225 | Val MCC: 0.226 | Val AUC: 0.695 | Val Acc: 0.429 | EarlyStop: 15/20 | Time: 48.0s
+- Epoch [018/200] Train Loss: 4.0330 | Train MCC: 0.522 | Train AUC: 0.904 | Train Acc: 0.720 | Val Loss: 0.2193 | Val MCC: 0.209 | Val AUC: 0.697 | Val Acc: 0.517 | EarlyStop: 16/20 | Time: 48.1s
+- Epoch [019/200] Train Loss: 4.0306 | Train MCC: 0.534 | Train AUC: 0.909 | Train Acc: 0.728 | Val Loss: 0.2179 | Val MCC: 0.215 | Val AUC: 0.703 | Val Acc: 0.449 | EarlyStop: 17/20 | Time: 48.1s
+- Epoch [020/200] Train Loss: 4.0266 | Train MCC: 0.550 | Train AUC: 0.915 | Train Acc: 0.738 | Val Loss: 0.2297 | Val MCC: 0.226 | Val AUC: 0.708 | Val Acc: 0.491 | EarlyStop: 18/20 | Time: 48.2s
+- Epoch [021/200] Train Loss: 4.0236 | Train MCC: 0.565 | Train AUC: 0.918 | Train Acc: 0.748 | Val Loss: 0.2314 | Val MCC: 0.223 | Val AUC: 0.701 | Val Acc: 0.512 | EarlyStop: 19/20 | Time: 48.1s
+XXXXXXXXXX Early stopping triggered at epoch 21!
+=================================================
+Best val AUC: 0.7211 at epoch 1  [MCC=0.2415  AUC=0.7211]
+=================================================
+Best threshold (from epoch 1 model): 0.72, MCC: 0.2415
+
+Best epoch    : 1
+Best val AUC  : 0.7211
+Best val MCC  : 0.2415
+Threshold     : 0.72
+
+============================================================
+Testing on held-out test set: sapiens
+  n_test=9613, n_essential=1213, π=0.126
+########## Testing on 9613 samples...
+Bayesian prior correction: π_train=0.500 → π_test=0.126  (log-odds shift = -1.935 nats)
+  Prob stats before: mean=0.679  median=0.673  frac>0.5=1.000
+  Prob stats after : mean=0.237  median=0.229  frac>0.5=0.000
+Threshold search: best=0.26, flipped=False
+########## Testing completed.
+
+v10_a20 — trained on all except 'sapiens':
+ #Sample   TN   FP  FN  TP  Sensitivity  Specificity  Precision  Recall  Accuracy    AUC    MCC  Threshold  pi_test
+    9613 6756 1644 600 613       0.5054       0.8043     0.2716  0.5054    0.7666 0.7196 0.2426       0.26   0.1262
+
+Results saved → /gpfs/data/fs72129/imansamiei/soroush/GEPNew/newsrc/newsrc/src/resultsMCC/loo_v10_a20_sapiens_results.csv
+LOO 'sapiens' (v10_a20) complete.
